@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>The Silent Voice in Education | Vincent B. Troiano</title>
+  <meta name="description" content="A 36-year veteran educator examines how the 1960s reform era sidelined classroom teachers and what it cost American students in special education and beyond. By Vincent B. Troiano.">
+  <meta name="author" content="Vincent B. Troiano">
+  <meta name="keywords" content="education reform, classroom teachers, special education, IEP, 1960s education, Vincent Troiano, silent voice in education, local control education">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Silent Voice in Education | Vincent B. Troiano">
+  <meta property="og:description" content="A veteran educator's landmark work on how 1960s school reforms sidelined classroom teachers -- and what it cost American students.">
+  <meta property="og:type" content="book">
+  <meta property="og:image" content="images/book-cover.jpg">
+  <meta property="og:url" content="https://yourdomainhere.com">
+
+  <!-- Schema.org Book Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "The Silent Voice in Education",
+    "alternativeHeadline": "The Importance of Involving Classroom Teachers",
+    "author": {
+      "@type": "Person",
+      "name": "Vincent B. Troiano",
+      "jobTitle": "Educator",
+      "worksFor": "Old Bridge Township School System"
+    },
+    "description": "A veteran educator examines how 1960s reforms sidelined classroom teachers and what it cost American students in special education and beyond.",
+    "genre": ["Education", "Special Education", "Education Policy"],
+    "inLanguage": "en",
+    "url": "https://www.amazon.com/dp/YOURASINHERE"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy:       #0d1f3c;
+      --navy-mid:   #1b3a70;
+      --cream:      #f6f3ee;
+      --cream-mid:  #ede8df;
+      --cream-dark: #e2dcd2;
+      --gold:       #b8872e;
+      --gold-light: #d4a84b;
+      --text:       #18182a;
+      --text-muted: #5a5a6e;
+      --white:      #ffffff;
+      --border:     rgba(13,31,60,0.10);
+      --border-mid: rgba(13,31,60,0.18);
+      --nav-h:      68px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Typography */
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    h1 { font-size: clamp(2rem, 4.5vw, 3.4rem); line-height: 1.08; font-weight: 700; letter-spacing: -0.01em; }
+    h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 600; line-height: 1.2; }
+    h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 600; }
+    p  { line-height: 1.85; color: var(--text-muted); }
+    a  { color: inherit; }
+
+    /* Utilities */
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 40px; }
+    .eyebrow {
+      display: block;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .rule { width: 44px; height: 2px; background: var(--gold); margin: 20px 0; border-radius: 1px; }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      padding: 13px 28px;
+      border-radius: 3px;
+      text-decoration: none;
+      border: 2px solid var(--navy);
+      transition: background 0.2s, border-color 0.2s;
+      cursor: pointer;
+    }
+    .btn-primary:hover { background: var(--navy-mid); border-color: var(--navy-mid); }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--navy);
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      padding: 11px 26px;
+      border-radius: 3px;
+      text-decoration: none;
+      border: 2px solid var(--border-mid);
+      transition: border-color 0.2s, background 0.2s;
+      cursor: pointer;
+    }
+    .btn-outline:hover { border-color: var(--navy); background: rgba(13,31,60,0.04); }
+
+    /* ---- NAVIGATION ---- */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 40px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--navy);
+      text-decoration: none;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .nav-links a:hover { opacity: 1; }
+    .nav-links .nav-cta {
+      background: var(--gold);
+      color: var(--navy) !important;
+      padding: 9px 20px;
+      border-radius: 3px;
+      font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      opacity: 1 !important;
+      transition: background 0.2s !important;
+    }
+    .nav-links .nav-cta:hover { background: var(--gold-light) !important; }
+
+    /* ---- HERO ---- */
+    .hero {
+      min-height: 100vh;
+      background: var(--navy);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding-top: var(--nav-h);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-lines {
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        0deg, transparent, transparent 39px,
+        rgba(255,255,255,0.022) 39px, rgba(255,255,255,0.022) 40px
+      );
+      pointer-events: none;
+    }
+    .hero-text {
+      padding: 80px clamp(32px, 6vw, 80px) 80px clamp(32px, 8vw, 120px);
+      position: relative;
+      z-index: 1;
+    }
+    .hero-text .eyebrow { color: var(--gold-light); }
+    .hero-text h1 { color: var(--white); margin-bottom: 10px; }
+    .hero-subtitle {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.45);
+    }
+    .hero-text .rule { background: var(--gold); }
+    .hero-text p { color: rgba(255,255,255,0.6); font-size: 1rem; max-width: 440px; margin-bottom: 32px; }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-text .btn-primary { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+    .hero-text .btn-primary:hover { background: var(--gold-light); border-color: var(--gold-light); }
+    .hero-text .btn-outline { border-color: rgba(255,255,255,0.3); color: var(--white); }
+    .hero-text .btn-outline:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.06); }
+
+    .hero-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 40px 80px 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-visual img, .hero-visual .book-ph {
+      width: clamp(200px, 26vw, 300px);
+      aspect-ratio: 2/3;
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow: 20px 20px 0 rgba(184,135,46,0.22), 0 40px 80px rgba(0,0,0,0.55);
+    }
+    .book-ph {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.35);
+      font-size: 0.78rem;
+      text-align: center;
+      padding: 24px;
+    }
+    .book-ph svg { width: 36px; height: 36px; }
+
+    /* ---- STATS BAR ---- */
+    .stats-bar { background: var(--gold); padding: 26px 40px; }
+    .stats-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .stat { text-align: center; padding: 0 52px; border-right: 1px solid rgba(13,31,60,0.18); }
+    .stat:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--navy);
+      display: block;
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(13,31,60,0.65);
+      margin-top: 4px;
+      display: block;
+    }
+
+    /* ---- SYNOPSIS ---- */
+    .synopsis { padding: 100px 0; background: var(--cream); }
+    .synopsis-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.65fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .synopsis-left h2 { color: var(--navy); }
+    .synopsis-pull {
+      background: var(--navy);
+      color: var(--white);
+      padding: 28px 32px;
+      border-radius: 4px;
+      margin-top: 28px;
+      border-left: 4px solid var(--gold);
+    }
+    .synopsis-pull p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.75;
+    }
+    .synopsis-right p { font-size: 0.97rem; margin-bottom: 18px; }
+    .synopsis-right p:last-child { margin-bottom: 0; }
+
+    /* ---- CHAPTERS ---- */
+    .chapters { background: var(--cream-mid); padding: 100px 0; }
+    .chapters-header { text-align: center; margin-bottom: 52px; }
+    .chapters-header h2 { color: var(--navy); }
+    .chapters-grid {
+      border: 1px solid var(--border-mid);
+      border-radius: 6px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .ch-intro {
+      grid-column: 1 / -1;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .ch-intro .ch-num { color: var(--gold-light); }
+    .ch-intro .ch-title { color: rgba(255,255,255,0.78); font-style: italic; }
+    .ch-intro .ch-badge {
+      margin-left: auto;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      background: rgba(184,135,46,0.18);
+      padding: 4px 12px;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+    .ch-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 24px;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+    .ch-item:nth-child(even) { border-right: none; }
+    .ch-item:nth-last-child(-n+2) { border-bottom: none; }
+    .ch-item:hover { background: rgba(184,135,46,0.04); }
+    .ch-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gold);
+      min-width: 20px;
+      margin-top: 1px;
+    }
+    .ch-title { font-size: 0.88rem; font-weight: 500; color: var(--text); line-height: 1.5; }
+
+    /* ---- AUTHOR ---- */
+    .author { padding: 100px 0; background: var(--cream); }
+    .author-inner {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 72px;
+      align-items: start;
+    }
+    .author-photo img, .author-photo .photo-ph {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .photo-ph {
+      background: var(--cream-dark);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      text-align: center;
+    }
+    .photo-ph svg { width: 40px; height: 40px; opacity: 0.4; }
+    .author-tag {
+      display: inline-block;
+      font-size: 0.67rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(184,135,46,0.38);
+      padding: 4px 12px;
+      border-radius: 2px;
+      margin-bottom: 14px;
+    }
+    .author-bio h2 { color: var(--navy); margin-bottom: 5px; }
+    .author-role { font-size: 0.9rem; color: var(--text-muted); }
+    .author-bio p { font-size: 0.95rem; margin-bottom: 16px; }
+    .author-bio p:last-of-type { margin-bottom: 0; }
+    .author-creds {
+      display: flex;
+      gap: 28px;
+      margin-top: 28px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .cred-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--navy);
+      display: block;
+    }
+    .cred-label { font-size: 0.78rem; color: var(--text-muted); display: block; }
+
+    /* ---- BLOG ---- */
+    .blog { background: var(--cream-mid); padding: 100px 0; }
+    .blog-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 48px;
+    }
+    .blog-header h2 { color: var(--navy); }
+    .blog-header a { font-size: 0.82rem; font-weight: 600; color: var(--navy); text-decoration: none; opacity: 0.55; transition: opacity 0.15s; }
+    .blog-header a:hover { opacity: 1; }
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .blog-card {
+      background: var(--white);
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: transform 0.25s, box-shadow 0.25s;
+      text-decoration: none;
+      display: block;
+      color: inherit;
+    }
+    .blog-card:hover { transform: translateY(-5px); box-shadow: 0 16px 48px rgba(13,31,60,0.1); }
+    .blog-card-img {
+      height: 160px;
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      padding: 16px 20px;
+    }
+    .blog-card-img.c1 { background: #0d1f3c; }
+    .blog-card-img.c2 { background: #172f58; }
+    .blog-card-img.c3 { background: #1e3a70; }
+    .blog-card-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.06);
+      position: absolute;
+      right: 12px;
+      bottom: -12px;
+      line-height: 1;
+    }
+    .blog-card-tag-wrap {
+      position: relative;
+      z-index: 1;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      background: rgba(184,135,46,0.18);
+      padding: 4px 10px;
+      border-radius: 2px;
+    }
+    .blog-card-body { padding: 24px; }
+    .blog-card h3 { font-size: 0.97rem; color: var(--navy); line-height: 1.45; margin-bottom: 10px; }
+    .blog-card p { font-size: 0.84rem; line-height: 1.72; margin-bottom: 16px; }
+    .blog-read-more { font-size: 0.78rem; font-weight: 600; color: var(--navy); opacity: 0.55; }
+
+    /* ---- CTA / NEWSLETTER ---- */
+    .cta-band { background: var(--navy); padding: 90px 0; }
+    .cta-inner { max-width: 520px; margin: 0 auto; padding: 0 40px; text-align: center; }
+    .cta-band .eyebrow { text-align: center; color: var(--gold-light); }
+    .cta-band h2 { color: var(--white); margin-bottom: 14px; }
+    .cta-band p { color: rgba(255,255,255,0.52); font-size: 0.95rem; margin-bottom: 32px; }
+    .email-form { display: flex; gap: 8px; }
+    .email-form input {
+      flex: 1;
+      padding: 13px 18px;
+      border-radius: 3px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.07);
+      color: var(--white);
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.88rem;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .email-form input::placeholder { color: rgba(255,255,255,0.3); }
+    .email-form input:focus { border-color: var(--gold); }
+    .email-form .btn-primary { background: var(--gold); border-color: var(--gold); color: var(--navy); white-space: nowrap; }
+    .email-form .btn-primary:hover { background: var(--gold-light); border-color: var(--gold-light); }
+
+    /* ---- FOOTER ---- */
+    .footer { background: var(--cream-dark); border-top: 1px solid var(--border); padding: 32px 0; }
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+      display: block;
+    }
+    .footer-copy { font-size: 0.75rem; color: var(--text-muted); margin-top: 3px; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 0.78rem; color: var(--text-muted); text-decoration: none; transition: color 0.15s; }
+    .footer-links a:hover { color: var(--navy); }
+
+    /* ---- SCROLL REVEAL ---- */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: var(--nav-h); }
+      .hero-text { padding: 60px 32px 40px; }
+      .hero-visual { padding: 0 32px 60px; justify-content: flex-start; }
+      .synopsis-inner { grid-template-columns: 1fr; gap: 40px; }
+      .author-inner { grid-template-columns: 1fr; gap: 40px; }
+      .author-photo { max-width: 220px; }
+      .blog-grid { grid-template-columns: 1fr 1fr; }
+      .chapters-grid { grid-template-columns: 1fr; }
+      .ch-item { border-right: none !important; }
+      .ch-item:last-child { border-bottom: none; }
+      .ch-item:nth-last-child(2) { border-bottom: 1px solid var(--border); }
+      .stats-inner { flex-wrap: wrap; }
+      .stat { padding: 16px 32px; width: 50%; border-bottom: 1px solid rgba(13,31,60,0.15); }
+      .stat:nth-child(even) { border-right: none; }
+      .stat:nth-last-child(-n+2) { border-bottom: none; }
+    }
+    @media (max-width: 640px) {
+      .container { padding: 0 24px; }
+      .nav-inner { padding: 0 24px; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .email-form { flex-direction: column; }
+      .footer-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .blog-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#home" class="nav-brand">The Silent Voice in Education</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#chapters">Chapters</a>
+        <a href="#author">Author</a>
+        <a href="#blog">Blog</a>
+        <!-- Update the Amazon URL below with your real ASIN -->
+        <a href="https://www.amazon.com/dp/YOURASINHERE" class="nav-cta" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home" aria-label="Book introduction">
+    <div class="hero-lines" aria-hidden="true"></div>
+    <div class="hero-text">
+      <span class="eyebrow">Vincent B. Troiano</span>
+      <h1>The Silent Voice<br>in Education</h1>
+      <p class="hero-subtitle">The Importance of Involving Classroom Teachers</p>
+      <div class="rule" aria-hidden="true"></div>
+      <p>A 36-year veteran educator examines how the 1960s reform era sidelined classroom teachers -- and what it cost American students in special education and beyond.</p>
+      <div class="hero-btns">
+        <a href="https://www.amazon.com/dp/YOURASINHERE" class="btn-primary" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+        <a href="#about" class="btn-outline">Read the synopsis</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <!--
+        IMAGES: Place book-cover.jpg inside an "images" folder
+        in the same directory as this HTML file.
+        The onerror attribute shows a placeholder if the file is missing.
+      -->
+      <img
+        src="images/book-cover.jpg"
+        alt="The Silent Voice in Education book cover by Vincent B. Troiano"
+        onerror="this.style.display='none';document.getElementById('book-ph').style.display='flex'"
+      >
+      <div class="book-ph" id="book-ph" style="display:none;" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+        </svg>
+        Place book-cover.jpg<br>in the images/ folder
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar" aria-label="Author credentials at a glance">
+    <div class="stats-inner">
+      <div class="stat">
+        <span class="stat-num">36</span>
+        <span class="stat-label">Years Teaching</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">27</span>
+        <span class="stat-label">Years in Special Ed</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">13</span>
+        <span class="stat-label">Chapters</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">NJ</span>
+        <span class="stat-label">Old Bridge Township</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SYNOPSIS -->
+  <section class="synopsis" id="about" aria-label="About the book">
+    <div class="container">
+      <div class="synopsis-inner">
+        <div class="synopsis-left reveal">
+          <span class="eyebrow">About the Book</span>
+          <h2>When reform moved faster than the classroom</h2>
+          <div class="rule" aria-hidden="true"></div>
+          <div class="synopsis-pull">
+            <p>"Classroom teachers became the silent voices in education -- and the cost was borne by the students who needed them most."</p>
+          </div>
+        </div>
+        <div class="synopsis-right reveal reveal-delay-1">
+          <p>Education in our country lost an opportunity to move forward in a positive manner when some parts of the education establishment moved too quickly with reforms in the 1960s. The promise of "new math," middle school, and special education were taken seriously -- but without a sound basis of successful classroom instruction upon which these concepts were constructed.</p>
+          <p>In that process, classroom pedagogy began to be ignored as a necessary criterion upon which school programs should be constructed. Classroom teachers became the silent voices in education. Levels of bureaucracy that separate school districts from the kind of decision-making authority that would have made a difference in educational opportunity for many students is also discussed.</p>
+          <p>Special education reform is examined with a critical look at Child Study Team responsibilities and individual instruction. An unpublished study on handedness by the author is also presented -- a comparison of the handedness of students identified as emotionally disturbed and those in regular classes. Frontal lobe development of the brain is briefly discussed.</p>
+          <p>There can be no move toward local control of education without the voice of classroom teachers. Only information generated by classroom teachers, given directly to school boards, would form the primary basis of movement to make local education more relevant to the student population.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTERS -->
+  <section class="chapters" id="chapters" aria-label="Table of contents">
+    <div class="container">
+      <div class="chapters-header reveal">
+        <span class="eyebrow">Table of Contents</span>
+        <h2>What's inside</h2>
+      </div>
+      <div class="chapters-grid reveal reveal-delay-1">
+        <div class="ch-intro">
+          <span class="ch-num">Intro</span>
+          <span class="ch-title">The 1960s and "Change"</span>
+          <span class="ch-badge">Introduction</span>
+        </div>
+        <div class="ch-item">
+          <span class="ch-num">1</span>
+          <span class="ch-title">A Two-Tiered System</span>
+        </div>
+        <div class="ch-item">
+          <span class="ch-num">2</span>
+          <span class="ch-title">Local Leadership</span>
+        </div>
+        <div class="ch-item">
+          <span class="ch-num">3</span>
+          <span class="ch-title">Classroom Teachers React to the Times</span>
+        </div>
+        <div class="ch-item">
+          <span class="ch-num">4</span>
+          <span class="ch-title">Special Education: Basis and Reform</span>
+        </div>
+        <div class="ch-item">
+          <span class="ch-num">5</span>
+          <span class="ch-title">Classroom Management in Special Education</span>
+        </div>
+        <div class="ch-item">
+          <span class="ch-num">6</span>
+          <span class="ch-title">Education Establishment System Failure</span>
+        </div>
+        <div class="ch-item">
+          <span class="ch-num">7</span>
+          <span class="ch-title">Teacher-Initiated Change that has Stood the Test of Time</span>
+        </div>
+        <div class="ch-item">
+          <span class="ch-num">8</span>
+          <span class="ch-title">Poor Leadership in Real Time</span>
+        </div>
+        <div class="ch-item">
+          <span class="ch-num">9</span>
+          <span class="ch-title">Special Education as a Bureaucracy</span>
+        </div>
+        <div class="ch-item">
+          <span class="ch-num">10</span>
+          <span class="ch-title">IEP as Legal Document vs Classroom Teacher Day-to-Day Evaluations</span>
+        </div>
+        <div class="ch-item">
+          <span class="ch-num">11</span>
+          <span class="ch-title">The Teacher as Facilitator vs Goals and Objectives</span>
+        </div>
+        <div class="ch-item">
+          <span class="ch-num">12</span>
+          <span class="ch-title">Local Control of Education: A Beginning</span>
+        </div>
+        <div class="ch-item">
+          <span class="ch-num">13</span>
+          <span class="ch-title">Individual Instruction</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHOR -->
+  <section class="author" id="author" aria-label="About the author">
+    <div class="container">
+      <div class="author-inner">
+        <div class="author-photo reveal">
+          <!--
+            IMAGES: Place author.jpg inside the "images" folder.
+            The onerror shows a placeholder if the file is missing.
+          -->
+          <img
+            src="images/author.jpg"
+            alt="Vincent B. Troiano, author of The Silent Voice in Education"
+            style="border-radius:4px;"
+            onerror="this.style.display='none';document.getElementById('author-ph').style.display='flex'"
+          >
+          <div class="photo-ph" id="author-ph" style="display:none; border-radius:4px; aspect-ratio:3/4;" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+            Place author.jpg<br>in the images/ folder
+          </div>
+        </div>
+        <div class="author-bio reveal reveal-delay-1">
+          <span class="author-tag">About the Author</span>
+          <h2>Vincent B. Troiano</h2>
+          <p class="author-role">Educator, Old Bridge Township School System, New Jersey</p>
+          <div class="rule" aria-hidden="true"></div>
+          <p>Vincent B. Troiano taught for the Old Bridge Township School System in New Jersey for 36 years: grades 4-6 for 9 years and special education for 27 years. His special education teaching career began in self-contained classes working with students identified as Emotionally Disturbed.</p>
+          <p>Concentrating on learning disabilities was an outgrowth of that experience. Over the course of his career, Troiano developed a firsthand understanding of the gap between educational policy and classroom reality -- a gap that forms the heart of this book.</p>
+          <p>The Silent Voice in Education draws on decades of direct observation and experience to argue that teachers, not bureaucracies, must be the primary voice in shaping education policy for the students they serve every day.</p>
+          <div class="author-creds">
+            <div>
+              <span class="cred-num">36</span>
+              <span class="cred-label">Years teaching</span>
+            </div>
+            <div>
+              <span class="cred-num">27</span>
+              <span class="cred-label">Years in special education</span>
+            </div>
+            <div>
+              <span class="cred-num">NJ</span>
+              <span class="cred-label">Old Bridge Township</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="blog" id="blog" aria-label="Blog posts">
+    <div class="container">
+      <div class="blog-header reveal">
+        <div>
+          <span class="eyebrow">From the Blog</span>
+          <h2>Perspectives on education reform</h2>
+        </div>
+        <a href="blog.html">View all posts &rarr;</a>
+      </div>
+      <div class="blog-grid">
+        <a href="blog/classroom-teachers-education-reform.html" class="blog-card reveal">
+          <div class="blog-card-img c1">
+            <span class="blog-card-tag-wrap">Education Policy</span>
+            <span class="blog-card-num" aria-hidden="true">01</span>
+          </div>
+          <div class="blog-card-body">
+            <h3>Why Classroom Teachers Must Be Part of Every Education Reform Conversation</h3>
+            <p>When policy is built without the people doing the teaching, everyone loses -- especially the students least equipped to adapt to poorly designed change.</p>
+            <span class="blog-read-more">Read more &rarr;</span>
+          </div>
+        </a>
+        <a href="blog/iep-legal-document-vs-classroom-reality.html" class="blog-card reveal reveal-delay-1">
+          <div class="blog-card-img c2">
+            <span class="blog-card-tag-wrap">Special Education</span>
+            <span class="blog-card-num" aria-hidden="true">02</span>
+          </div>
+          <div class="blog-card-body">
+            <h3>IEPs: What the Legal Document Misses About Day-to-Day Classroom Reality</h3>
+            <p>The gap between an IEP on paper and what a teacher faces Monday morning is wider than most policymakers will ever know.</p>
+            <span class="blog-read-more">Read more &rarr;</span>
+          </div>
+        </a>
+        <a href="blog/new-math-1960s-lessons-school-reform.html" class="blog-card reveal reveal-delay-2">
+          <div class="blog-card-img c3">
+            <span class="blog-card-tag-wrap">Education History</span>
+            <span class="blog-card-num" aria-hidden="true">03</span>
+          </div>
+          <div class="blog-card-body">
+            <h3>What the "New Math" Experiment of the 1960s Still Teaches Us About School Reform</h3>
+            <p>An ambitious idea rushed to scale without classroom grounding -- a pattern that keeps repeating itself in American education policy.</p>
+            <span class="blog-read-more">Read more &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER / CTA -->
+  <section class="cta-band" aria-label="Newsletter signup">
+    <div class="cta-inner">
+      <span class="eyebrow">Stay Connected</span>
+      <h2>New posts and updates</h2>
+      <p>Get new essays on education reform, special education, and classroom teaching delivered to your inbox.</p>
+      <form class="email-form" onsubmit="handleSubscribe(event)">
+        <input type="email" placeholder="Your email address" aria-label="Email address" required>
+        <button type="submit" class="btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div>
+        <span class="footer-brand">The Silent Voice in Education</span>
+        <span class="footer-copy">&copy; 2025 Vincent B. Troiano. All rights reserved.</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.amazon.com/dp/YOURASINHERE" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+        <a href="#blog">Blog</a>
+        <a href="#author">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal using IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Simple newsletter form handler -- connect to your email service of choice
+    function handleSubscribe(e) {
+      e.preventDefault();
+      const input = e.target.querySelector('input[type="email"]');
+      const btn = e.target.querySelector('button');
+      btn.textContent = 'Subscribed!';
+      btn.style.background = '#4caf7d';
+      btn.style.borderColor = '#4caf7d';
+      input.value = '';
+      setTimeout(() => {
+        btn.textContent = 'Subscribe';
+        btn.style.background = '';
+        btn.style.borderColor = '';
+      }, 3000);
+    }
+  </script>
+
+</body>
+</html>
