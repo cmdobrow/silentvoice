@@ -428,7 +428,14 @@
     .blog-header h2 { color: var(--navy); }
     .blog-header a { font-size: 0.82rem; font-weight: 600; color: var(--navy); text-decoration: none; opacity: 0.55; transition: opacity 0.15s; }
     .blog-header a:hover { opacity: 1; }
-    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 360px;
+    }
+    /* When 2+ posts exist, remove the max-width cap above so they spread out.
+       Change max-width to 760px for two posts, or delete the line for three. */
     .blog-card {
       background: var(--white);
       border-radius: 4px;
@@ -768,36 +775,20 @@
         <a href="blog.html">View all posts &rarr;</a>
       </div>
       <div class="blog-grid">
-        <a href="blog/classroom-teachers-education-reform.html" class="blog-card reveal">
+        <!-- ============================================
+             LIVE POSTS. To add a new one, copy this whole
+             <a> block, paste it ABOVE this one (newest first),
+             and update the href, tag, number, title, and blurb.
+             Alternate the image class: c1, c2, c3.
+             ============================================ -->
+        <a href="blog/iep-legal-document-vs-classroom-reality.html" class="blog-card reveal">
           <div class="blog-card-img c1">
-            <span class="blog-card-tag-wrap">Education Policy</span>
+            <span class="blog-card-tag-wrap">Special Education</span>
             <span class="blog-card-num" aria-hidden="true">01</span>
           </div>
           <div class="blog-card-body">
-            <h3>Why Classroom Teachers Must Be Part of Every Education Reform Conversation</h3>
-            <p>When policy is built without the people doing the teaching, everyone loses -- especially the students least equipped to adapt to poorly designed change.</p>
-            <span class="blog-read-more">Read more &rarr;</span>
-          </div>
-        </a>
-        <a href="blog/iep-legal-document-vs-classroom-reality.html" class="blog-card reveal reveal-delay-1">
-          <div class="blog-card-img c2">
-            <span class="blog-card-tag-wrap">Special Education</span>
-            <span class="blog-card-num" aria-hidden="true">02</span>
-          </div>
-          <div class="blog-card-body">
-            <h3>IEPs: What the Legal Document Misses About Day-to-Day Classroom Reality</h3>
-            <p>The gap between an IEP on paper and what a teacher faces Monday morning is wider than most policymakers will ever know.</p>
-            <span class="blog-read-more">Read more &rarr;</span>
-          </div>
-        </a>
-        <a href="blog/new-math-1960s-lessons-school-reform.html" class="blog-card reveal reveal-delay-2">
-          <div class="blog-card-img c3">
-            <span class="blog-card-tag-wrap">Education History</span>
-            <span class="blog-card-num" aria-hidden="true">03</span>
-          </div>
-          <div class="blog-card-body">
-            <h3>What the "New Math" Experiment of the 1960s Still Teaches Us About School Reform</h3>
-            <p>An ambitious idea rushed to scale without classroom grounding -- a pattern that keeps repeating itself in American education policy.</p>
+            <h3>IEPs: What the Legal Document Misses About Classroom Reality</h3>
+            <p>An IEP is a legal document. Teaching is not a legal act. It happens in real time, and it does not pause while a teacher consults a binder.</p>
             <span class="blog-read-more">Read more &rarr;</span>
           </div>
         </a>
