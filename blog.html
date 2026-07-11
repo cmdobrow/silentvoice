@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Blog | The Silent Voice in Education</title>
+  <meta name="description" content="Essays on education reform, special education, and the role of classroom teachers by Vincent B. Troiano, a 36-year veteran educator.">
+  <meta name="author" content="Vincent B. Troiano">
+
+  <meta property="og:title" content="Blog | The Silent Voice in Education">
+  <meta property="og:description" content="Essays on education reform, special education, and the role of classroom teachers.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy:       #0d1f3c;
+      --cream:      #f6f3ee;
+      --cream-mid:  #ede8df;
+      --cream-dark: #e2dcd2;
+      --gold:       #b8872e;
+      --gold-light: #d4a84b;
+      --text:       #18182a;
+      --text-muted: #5a5a6e;
+      --white:      #ffffff;
+      --border:     rgba(13,31,60,0.10);
+      --border-mid: rgba(13,31,60,0.18);
+      --nav-h:      68px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    a { color: inherit; }
+
+    /* ---- NAV ---- */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 40px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--navy);
+      text-decoration: none;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .nav-links a:hover { opacity: 1; }
+    .nav-links .nav-cta {
+      background: var(--gold);
+      color: var(--navy) !important;
+      padding: 9px 20px;
+      border-radius: 3px;
+      font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      opacity: 1 !important;
+      transition: background 0.2s !important;
+    }
+    .nav-links .nav-cta:hover { background: var(--gold-light) !important; }
+
+    /* ---- HEADER ---- */
+    .blog-header {
+      background: var(--navy);
+      padding: calc(var(--nav-h) + 72px) 40px 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .blog-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        0deg, transparent, transparent 39px,
+        rgba(255,255,255,0.022) 39px, rgba(255,255,255,0.022) 40px
+      );
+    }
+    .blog-header-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .eyebrow {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 12px;
+    }
+    .blog-header h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .blog-header p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.58);
+      max-width: 560px;
+    }
+
+    /* ---- POST LIST ---- */
+    .posts {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 72px 40px 80px;
+    }
+    .post-card {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 32px;
+      padding: 32px 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+      transition: opacity 0.2s;
+    }
+    .post-card:first-child { padding-top: 0; }
+    .post-card:hover { opacity: 0.75; }
+    .post-card:hover h2 { color: var(--gold); }
+    .post-date {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      padding-top: 4px;
+    }
+    .post-tag {
+      display: inline-block;
+      font-size: 0.63rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(184,135,46,0.35);
+      padding: 3px 10px;
+      border-radius: 2px;
+      margin-bottom: 12px;
+    }
+    .post-card h2 {
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+    .post-card p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .read-more {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--navy);
+      opacity: 0.6;
+    }
+
+    .empty-note {
+      text-align: center;
+      padding: 40px 0 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* ---- FOOTER ---- */
+    .footer { background: var(--cream-dark); border-top: 1px solid var(--border); padding: 32px 0; }
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+      display: block;
+    }
+    .footer-copy { font-size: 0.75rem; color: var(--text-muted); margin-top: 3px; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 0.78rem; color: var(--text-muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--navy); }
+
+    @media (max-width: 640px) {
+      .nav-inner { padding: 0 24px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .blog-header { padding: calc(var(--nav-h) + 48px) 24px 48px; }
+      .posts { padding: 48px 24px 56px; }
+      .post-card { grid-template-columns: 1fr; gap: 10px; }
+      .post-date { padding-top: 0; }
+      .footer-inner { flex-direction: column; align-items: flex-start; padding: 0 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">The Silent Voice in Education</a>
+      <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#chapters">Chapters</a>
+        <a href="index.html#author">Author</a>
+        <a href="blog.html">Blog</a>
+        <a href="https://buy.thesilentvoiceineducation.com" class="nav-cta" target="_blank" rel="noopener noreferrer">Buy Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="blog-header">
+    <div class="blog-header-inner">
+      <span class="eyebrow">The Blog</span>
+      <h1>Perspectives on education reform</h1>
+      <p>Essays on special education, classroom teaching, and the decisions made about students by people who have never met them.</p>
+    </div>
+  </header>
+
+  <main class="posts">
+
+    <!-- ============================================
+         POST 1
+         To add a new post: copy this whole <a> block,
+         paste it ABOVE this one (newest first),
+         and update the link, date, tag, title, and blurb.
+         ============================================ -->
+    <a href="blog/iep-legal-document-vs-classroom-reality.html" class="post-card">
+      <div class="post-date">July 2026</div>
+      <div>
+        <span class="post-tag">Special Education</span>
+        <h2>IEPs: What the Legal Document Misses About Classroom Reality</h2>
+        <p>An Individualized Education Program is a legal document. Teaching is not a legal act. It happens in real time, in a room with other students in it, and it does not pause while a teacher consults a binder.</p>
+        <span class="read-more">Read the essay &rarr;</span>
+      </div>
+    </a>
+
+    <p class="empty-note">More essays coming soon.</p>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div>
+        <span class="footer-brand">The Silent Voice in Education</span>
+        <span class="footer-copy">&copy; 2026 Vincent B. Troiano. All rights reserved.</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://buy.thesilentvoiceineducation.com" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        <a href="index.html">Home</a>
+        <a href="index.html#author">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
