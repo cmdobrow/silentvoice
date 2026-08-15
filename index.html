@@ -400,22 +400,6 @@
     .author-role { font-size: 0.9rem; color: var(--text-muted); }
     .author-bio p { font-size: 0.95rem; margin-bottom: 16px; }
     .author-bio p:last-of-type { margin-bottom: 0; }
-    .author-creds {
-      display: flex;
-      gap: 28px;
-      margin-top: 28px;
-      padding-top: 28px;
-      border-top: 1px solid var(--border);
-      flex-wrap: wrap;
-    }
-    .cred-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--navy);
-      display: block;
-    }
-    .cred-label { font-size: 0.78rem; color: var(--text-muted); display: block; }
 
     /* ---- BLOG ---- */
     .blog { background: var(--cream-mid); padding: 100px 0; }
@@ -486,30 +470,6 @@
     .blog-card p { font-size: 0.84rem; line-height: 1.72; margin-bottom: 16px; }
     .blog-read-more { font-size: 0.78rem; font-weight: 600; color: var(--navy); opacity: 0.55; }
 
-    /* ---- CTA / NEWSLETTER ---- */
-    .cta-band { background: var(--navy); padding: 90px 0; }
-    .cta-inner { max-width: 520px; margin: 0 auto; padding: 0 40px; text-align: center; }
-    .cta-band .eyebrow { text-align: center; color: var(--gold-light); }
-    .cta-band h2 { color: var(--white); margin-bottom: 14px; }
-    .cta-band p { color: rgba(255,255,255,0.52); font-size: 0.95rem; margin-bottom: 32px; }
-    .email-form { display: flex; gap: 8px; }
-    .email-form input {
-      flex: 1;
-      padding: 13px 18px;
-      border-radius: 3px;
-      border: 1px solid rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.07);
-      color: var(--white);
-      font-family: 'Source Sans 3', sans-serif;
-      font-size: 0.88rem;
-      outline: none;
-      transition: border-color 0.15s;
-    }
-    .email-form input::placeholder { color: rgba(255,255,255,0.3); }
-    .email-form input:focus { border-color: var(--gold); }
-    .email-form .btn-primary { background: var(--gold); border-color: var(--gold); color: var(--navy); white-space: nowrap; }
-    .email-form .btn-primary:hover { background: var(--gold-light); border-color: var(--gold-light); }
-
     /* ---- FOOTER ---- */
     .footer { background: var(--cream-dark); border-top: 1px solid var(--border); padding: 32px 0; }
     .footer-inner {
@@ -562,7 +522,6 @@
       .container { padding: 0 24px; }
       .nav-inner { padding: 0 24px; }
       .blog-grid { grid-template-columns: 1fr; }
-      .email-form { flex-direction: column; }
       .footer-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
       .nav-links a:not(.nav-cta) { display: none; }
       .blog-header { flex-direction: column; align-items: flex-start; gap: 8px; }
@@ -746,20 +705,6 @@
           <p>Vincent B. Troiano taught for the Old Bridge Township School System in New Jersey for 36 years: grades 4-6 for 9 years and special education for 27 years. His special education teaching career began in self-contained classes working with students identified as Emotionally Disturbed.</p>
           <p>Concentrating on learning disabilities was an outgrowth of that experience. Over the course of his career, Troiano developed a firsthand understanding of the gap between educational policy and classroom reality -- a gap that forms the heart of this book.</p>
           <p>The Silent Voice in Education draws on decades of direct observation and experience to argue that teachers, not bureaucracies, must be the primary voice in shaping education policy for the students they serve every day.</p>
-          <div class="author-creds">
-            <div>
-              <span class="cred-num">36</span>
-              <span class="cred-label">Years teaching</span>
-            </div>
-            <div>
-              <span class="cred-num">27</span>
-              <span class="cred-label">Years in special education</span>
-            </div>
-            <div>
-              <span class="cred-num">NJ</span>
-              <span class="cred-label">Old Bridge Township</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -797,19 +742,6 @@
     </div>
   </section>
 
-  <!-- NEWSLETTER / CTA -->
-  <section class="cta-band" aria-label="Newsletter signup">
-    <div class="cta-inner">
-      <span class="eyebrow">Stay Connected</span>
-      <h2>New posts and updates</h2>
-      <p>Get new essays on education reform, special education, and classroom teaching delivered to your inbox.</p>
-      <form class="email-form" onsubmit="handleSubscribe(event)">
-        <input type="email" placeholder="Your email address" aria-label="Email address" required>
-        <button type="submit" class="btn-primary">Subscribe</button>
-      </form>
-    </div>
-  </section>
-
   <!-- FOOTER -->
   <footer class="footer" role="contentinfo">
     <div class="footer-inner">
@@ -836,22 +768,6 @@
       });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Simple newsletter form handler -- connect to your email service of choice
-    function handleSubscribe(e) {
-      e.preventDefault();
-      const input = e.target.querySelector('input[type="email"]');
-      const btn = e.target.querySelector('button');
-      btn.textContent = 'Subscribed!';
-      btn.style.background = '#4caf7d';
-      btn.style.borderColor = '#4caf7d';
-      input.value = '';
-      setTimeout(() => {
-        btn.textContent = 'Subscribe';
-        btn.style.background = '';
-        btn.style.borderColor = '';
-      }, 3000);
-    }
   </script>
 
 </body>
