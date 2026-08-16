@@ -169,6 +169,8 @@
       font-size: 0.78rem;
       letter-spacing: 0.06em;
       opacity: 1 !important;
+      white-space: nowrap;
+      flex-shrink: 0;
       transition: background 0.2s !important;
     }
     .nav-links .nav-cta:hover { background: var(--gold-light) !important; }
@@ -560,6 +562,9 @@
       .footer-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
       .nav-links a:not(.nav-cta) { display: none; }
       .nav-toggle { display: inline-flex; }
+      .nav-brand { font-size: 0.82rem; }
+      .nav-links { gap: 10px; }
+      .nav-links .nav-cta { padding: 8px 14px; font-size: 0.72rem; }
       .blog-header { flex-direction: column; align-items: flex-start; gap: 8px; }
     }
   </style>
