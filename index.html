@@ -27,7 +27,7 @@
     "author": {
       "@type": "Person",
       "name": "Vincent B. Troiano",
-      "jobTitle": "Educator",
+      "jobTitle": "Retired Educator",
       "worksFor": "Old Bridge Township School System"
     },
     "description": "A veteran educator examines how 1960s reforms sidelined classroom teachers and what it cost American students in special education and beyond.",
@@ -160,6 +160,11 @@
       transition: opacity 0.2s;
     }
     .nav-links a:hover { opacity: 1; }
+    .nav-links a.active:not(.nav-cta) {
+      opacity: 1;
+      color: var(--gold);
+      font-weight: 600;
+    }
     .nav-links .nav-cta {
       background: var(--gold);
       color: var(--navy) !important;
@@ -210,6 +215,10 @@
       border-bottom: 1px solid var(--border);
     }
     .nav-mobile-panel a:last-child { border-bottom: none; }
+    .nav-mobile-panel a.active {
+      color: var(--gold);
+      font-weight: 700;
+    }
 
     /* ---- HERO ---- */
     .hero {
@@ -754,7 +763,7 @@
         <div class="author-bio reveal reveal-delay-1">
           <span class="author-tag">About the Author</span>
           <h2>Vincent B. Troiano</h2>
-          <p class="author-role">Educator, Old Bridge Township School System, New Jersey</p>
+          <p class="author-role">Retired Educator, Old Bridge Township School System, New Jersey</p>
           <div class="rule" aria-hidden="true"></div>
           <p>Vincent B. Troiano taught for the Old Bridge Township School System in New Jersey for 36 years: grades 4-6 for 9 years and special education for 27 years. His special education teaching career began in self-contained classes working with students identified as Emotionally Disturbed.</p>
           <p>Concentrating on learning disabilities was an outgrowth of that experience. Over the course of his career, Troiano developed a firsthand understanding of the gap between educational policy and classroom reality -- a gap that forms the heart of this book.</p>
@@ -839,6 +848,27 @@
         });
       });
     }
+
+    // Scroll-spy: highlight current section in nav (desktop + mobile)
+    const spySections = ['about', 'chapters', 'author', 'blog']
+      .map(id => document.getElementById(id))
+      .filter(Boolean);
+    const spyLinks = document.querySelectorAll(
+      '.nav-links a[href^="#"], .nav-mobile-panel a[href^="#"]'
+    );
+    const setActiveLink = (id) => {
+      spyLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+      });
+    };
+    const spyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveLink(entry.target.id);
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    spySections.forEach(section => spyObserver.observe(section));
   </script>
 
 </body>
