@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Whatever Happened to Arithmetic? | Vincent B. Troiano</title>
+  <meta name="description" content="A veteran teacher traces how 'new math' replaced arithmetic in American elementary schools, why it never proved superior, and what it cost generations of students.">
+  <meta name="author" content="Vincent B. Troiano">
+  <meta name="keywords" content="new math, arithmetic, elementary math education, Morris Kline, Why Johnny Can't Add, math education history, number facts, math curriculum reform">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Whatever Happened to Arithmetic?">
+  <meta property="og:description" content="A veteran teacher traces how 'new math' replaced arithmetic in American elementary schools, why it never proved superior, and what it cost generations of students.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://cmdobrow.github.io/silentvoice/blog/whatever-happened-to-arithmetic.html">
+
+  <!-- Schema.org Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Whatever Happened to Arithmetic?",
+    "description": "A veteran teacher traces how 'new math' replaced arithmetic in American elementary schools, why it never proved superior, and what it cost generations of students.",
+    "author": {
+      "@type": "Person",
+      "name": "Vincent B. Troiano"
+    },
+    "datePublished": "2026-08-15",
+    "articleSection": "Education History",
+    "keywords": "new math, arithmetic, elementary math education, math curriculum reform"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy:       #0d1f3c;
+      --cream:      #f6f3ee;
+      --cream-mid:  #ede8df;
+      --cream-dark: #e2dcd2;
+      --gold:       #b8872e;
+      --gold-light: #d4a84b;
+      --text:       #18182a;
+      --text-muted: #5a5a6e;
+      --white:      #ffffff;
+      --border:     rgba(13,31,60,0.10);
+      --border-mid: rgba(13,31,60,0.18);
+      --nav-h:      68px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    a { color: inherit; }
+
+    /* ---- NAVIGATION ---- */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 40px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--navy);
+      text-decoration: none;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .nav-links a:hover { opacity: 1; }
+    .nav-links .nav-cta {
+      background: var(--gold);
+      color: var(--navy) !important;
+      padding: 9px 20px;
+      border-radius: 3px;
+      font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      opacity: 1 !important;
+      transition: background 0.2s !important;
+    }
+    .nav-links .nav-cta:hover { background: var(--gold-light) !important; }
+
+    /* ---- ARTICLE HEADER ---- */
+    .article-header {
+      background: var(--navy);
+      padding: calc(var(--nav-h) + 72px) 40px 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .article-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        0deg, transparent, transparent 39px,
+        rgba(255,255,255,0.022) 39px, rgba(255,255,255,0.022) 40px
+      );
+      pointer-events: none;
+    }
+    .article-header-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .breadcrumb {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 22px;
+    }
+    .breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--gold-light); }
+    .article-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      background: rgba(184,135,46,0.18);
+      padding: 5px 12px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+    .article-header h1 {
+      font-size: clamp(1.9rem, 4vw, 2.9rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 20px;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.45);
+      flex-wrap: wrap;
+    }
+    .article-meta .dot { opacity: 0.4; }
+
+    /* ---- ARTICLE BODY ---- */
+    .article-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 72px 40px 40px;
+    }
+    .lede {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      line-height: 1.6;
+      color: var(--navy);
+      margin-bottom: 36px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--border);
+    }
+    .article-body p {
+      font-size: 1.02rem;
+      line-height: 1.9;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    .article-body h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.25;
+      margin: 48px 0 18px;
+    }
+    .article-body h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin: 32px 0 14px;
+    }
+    .article-body strong { color: var(--text); font-weight: 600; }
+    .article-body em { font-style: italic; }
+    .article-body ul {
+      margin: 0 0 24px 0;
+      padding-left: 22px;
+    }
+    .article-body li {
+      font-size: 1.02rem;
+      line-height: 1.85;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .article-body li::marker { color: var(--gold); }
+
+    .pullquote {
+      background: var(--navy);
+      border-left: 4px solid var(--gold);
+      padding: 30px 34px;
+      border-radius: 4px;
+      margin: 40px 0;
+    }
+    .pullquote p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.88);
+      margin: 0;
+    }
+
+    .callout {
+      background: var(--cream-mid);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 26px 30px;
+      margin: 40px 0;
+    }
+    .callout h3 { margin-top: 0; margin-bottom: 12px; font-size: 1.05rem; }
+    .callout p:last-child { margin-bottom: 0; }
+
+    .source-note {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-style: italic;
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      margin-top: 8px;
+    }
+
+    /* ---- BOOK CTA ---- */
+    .book-cta {
+      max-width: 720px;
+      margin: 24px auto 0;
+      padding: 0 40px 80px;
+    }
+    .book-cta-inner {
+      background: var(--white);
+      border: 1px solid var(--border-mid);
+      border-radius: 6px;
+      padding: 36px;
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+    .book-cta-inner img, .book-cta-ph {
+      width: 100%;
+      aspect-ratio: 2/3;
+      object-fit: cover;
+      border-radius: 3px;
+      box-shadow: 0 8px 24px rgba(13,31,60,0.18);
+    }
+    .book-cta-ph {
+      background: var(--cream-dark);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-align: center;
+      padding: 10px;
+    }
+    .book-cta-eyebrow {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .book-cta h3 {
+      font-size: 1.3rem;
+      color: var(--navy);
+      margin: 0 0 8px;
+      line-height: 1.25;
+    }
+    .book-cta p {
+      font-size: 0.92rem;
+      line-height: 1.75;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      padding: 12px 26px;
+      border-radius: 3px;
+      text-decoration: none;
+      border: 2px solid var(--gold);
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .btn-primary:hover { background: var(--gold-light); border-color: var(--gold-light); }
+
+    /* ---- FOOTER ---- */
+    .footer { background: var(--cream-dark); border-top: 1px solid var(--border); padding: 32px 0; }
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+      display: block;
+    }
+    .footer-copy { font-size: 0.75rem; color: var(--text-muted); margin-top: 3px; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 0.78rem; color: var(--text-muted); text-decoration: none; transition: color 0.15s; }
+    .footer-links a:hover { color: var(--navy); }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 640px) {
+      .nav-inner { padding: 0 24px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .article-header { padding: calc(var(--nav-h) + 48px) 24px 48px; }
+      .article-body { padding: 48px 24px 32px; }
+      .book-cta { padding: 0 24px 56px; }
+      .book-cta-inner { grid-template-columns: 1fr; text-align: center; padding: 28px; }
+      .book-cta-inner img, .book-cta-ph { max-width: 140px; margin: 0 auto; }
+      .footer-inner { flex-direction: column; align-items: flex-start; gap: 20px; padding: 0 24px; }
+      .lede { font-size: 1.15rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-brand">The Silent Voice in Education</a>
+      <div class="nav-links">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#chapters">Chapters</a>
+        <a href="../index.html#author">Author</a>
+        <a href="../blog.html">Blog</a>
+        <a href="https://buy.thesilentvoiceineducation.com" class="nav-cta" target="_blank" rel="noopener noreferrer">Buy Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HEADER -->
+  <header class="article-header">
+    <div class="article-header-inner">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a> &nbsp;/&nbsp; <a href="../blog.html">Blog</a> &nbsp;/&nbsp; Education History
+      </div>
+      <span class="article-tag">Education History</span>
+      <h1>Whatever Happened to Arithmetic?</h1>
+      <div class="article-meta">
+        <span>By Vincent B. Troiano</span>
+        <span class="dot">&middot;</span>
+        <span>August 2026</span>
+        <span class="dot">&middot;</span>
+        <span>10 min read</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ARTICLE BODY -->
+  <article class="article-body">
+
+    <p class="lede">An eight-year-old in our family came home talking about zeros. That is a red flag for anyone who has followed new math and its hold on the elementary curriculum. A traditional arithmetic lesson would never spend a day discussing zero as an abstract concept. It meant his math program was new math: an approach that asks young children to begin grappling with proof-based, abstract mathematics.</p>
+
+    <p>Morris Kline, in his book <em>Why Johnny Can't Add</em>, offers an example of that abstraction: seven is not a number, it is the name of a number. It is a numeral of the number, as are 5+2, 6+1, and 8-1. It is the production of precise language to prove truth. Kline argues that explaining the difference between a number and a numeral requires a level of abstraction not readily available to the regular elementary school teacher, and that the distinction itself is pretentious and unnecessary for understanding mathematics.</p>
+
+    <p>New math was supposed to replace arithmetic in elementary school. Instead, it created an achievement problem that persists to this day. Arithmetic never left school districts voluntarily. New math simply ignored it, and hype covered the elementary curriculum like a smoke screen. Most school districts likely made a serious effort to incorporate new math into their programs with varying levels of success. To this day, it survives as a kind of badge of honor in places that never really examined whether it worked.</p>
+
+    <p>It has taken far too long for the smoke to clear, and for parents to realize that the confusing homework they were told they couldn't help with never needed to be in the elementary curriculum in the first place. Arithmetic has been on the shelf too long. It is time to return it fully to elementary school math instruction.</p>
+
+    <h2>A report that missed the point</h2>
+
+    <p>In 2008, the U.S. Department of Education released a long-overdue report on mathematics that touched on a lack of "ease of operations" in the math process. But it failed to address the deeper problem: elementary school children were not developing the basic competency that shows up in test results.</p>
+
+    <p>My own experience with new math goes back to teaching it for three years early in my career. The school district had adopted one of the various new math approaches that Kline describes in his book. He identifies the groups and organizations that attempted to reform mathematics education and notes that they all headed in roughly the same direction, and so came to be described collectively by the term "modern mathematics," or "new mathematics."</p>
+
+    <h2>Where new math came from</h2>
+
+    <p>As a mathematician, Kline took exception to the abstract approach created by educator-mathematicians. When the country entered World War II, the military quickly discovered that many recruits were deficient in mathematics and had to institute special courses to bring proficiency up to standard. After the war, in the 1940s and 1950s, groups of educators came together and decided to reform the entire math curriculum in the name of better teaching.</p>
+
+    <p>Kline argued that the direction they chose, abstract curriculum reform, is useful mainly to those pursuing a career in mathematics. In every other subject area, math is a tool to be used, not a subject to be proven from first principles. At the inception of new math, the emphasis on abstraction was questioned by mathematicians themselves in an open letter published in 1962, reproduced in Kline's book. The letter recommended keeping math accessible across a range of student ability, and it closed with a warning about "a trend to excessive emphasis on abstraction on teaching of mathematics to engineers."</p>
+
+    <div class="pullquote">
+      <p>"If the U.S. Army was successful in identifying and correcting deficiencies in mathematics, why wasn't there a movement to understand their methods? Surely they did not use the curriculum proposed by the new mathematics groups of the 1940s and 1950s."</p>
+    </div>
+
+    <p>Math abstraction of this kind did not exist until the 1700s, after roughly a thousand years of ordinary counting. According to Kline, new math in its modern form was created in the 1950s by several different groups of educator-mathematicians, and although their programs varied, they shared an emphasis on abstraction. Kline, as a working mathematician, saw something different in what math instruction should be. He viewed computation and problem solving as learning to think mathematically, and he considered the new math emphasis on proving everything to be inappropriate for elementary education.</p>
+
+    <p>He had no idea how right he was. The educator-mathematicians who designed new math gave little consideration to the preadolescent brain when recommending abstract understanding for young children. They should have paid closer attention to capability, specifically to frontal lobe development.</p>
+
+    <h2>The bottom third, and the book burning</h2>
+
+    <p>My personal interest in this subject deepened when our school's new math program was discontinued after just five years. In a conversation with the salesman who had been involved with both the old and new programs, it came out that internal research had found the new math program was not appropriate for the bottom third of a normal class. No further explanation was ever given as to whether the publisher or the math group behind the curriculum had made that determination. Since there was a later effort to produce a less demanding curriculum at other levels, it may have been the math group itself.</p>
+
+    <p>According to Kline, most of the groups behind new math undertook no experimental work at all. The one exception was the University of Illinois Committee on School Mathematics, led by Professor Max Beberman, and even that group never produced evidence that its curriculum was actually superior.</p>
+
+    <p>Our new math program was eventually replaced by a traditional program similar to the one used before new math arrived, a transition that came with what I still think of as the book burning. Administrators were told to destroy the old traditional textbooks, because teachers, in the phrase of the time, "will be tempted to use them." In fact, some of us kept copies that survived, and we used them quietly to supplement students with number facts, which make computation simpler, quicker, and easier.</p>
+
+    <div class="callout">
+      <h3>What survived anyway</h3>
+      <p>Even after the old books were supposed to be gone, teachers kept teaching number facts wherever they could. That instinct never went away. It is still present in classrooms today, even where administrators actively discourage it.</p>
+    </div>
+
+    <h2>Number facts, forbidden and taught anyway</h2>
+
+    <p>Over the years, according to Kline, new math programs have folded in various amounts of traditional arithmetic. Yet some programs have held onto the original intent of new math so tightly that number facts are effectively forbidden, a fact that came up in a 2018 conversation with a third grade teacher. At the same time, news reports describe parent organizations in California and other states pushing for a return to traditional mathematics.</p>
+
+    <p>The 2008 Department of Education report, sometimes called the President's Math Commission Report, cited a lack of "ease of operations" as one reason students were not advancing to algebra at the rate they once had. Something was clearly wrong, but it took forty years to even ask the question. New math, an outgrowth of decisions made by educator-mathematicians in the 1950s and 1960s and adopted across many school districts, was not producing the deeper, more efficient understanding of mathematics it had promised.</p>
+
+    <p>One early argument for new math held that it would build such a deep understanding of mathematics that students would move into algebra earlier than before. The opposite happened. The Department of Education was ultimately asked to examine why student participation in algebra had declined during the very years new math was emphasized.</p>
+
+    <p>The commission's phrase, "ease of operations," could have been the opening for elementary curriculum directors to refocus on computation and problem solving, and perhaps even bring arithmetic back into the classroom. Instead, the phrase shared its paragraph with language about terminology, the very foundation of new math instruction, and the report stopped short of taking a clear position either way.</p>
+
+    <h2>What experienced teachers already knew</h2>
+
+    <p>Some math programs around the world have produced excellent results with traditional approaches: fewer objectives, more problem solving. Their students have consistently outperformed American students on standardized math testing. Experienced elementary teachers understand the value of number facts as a path to real computation. Math facts serve not only young minds but are used constantly throughout adult life. Teachers use them in countless ways to build understanding. To dismiss them as mere memorization, disconnected from deeper understanding, is to treat arithmetic as a lesser branch of mathematics and to ignore a few thousand years of its use in human civilization.</p>
+
+    <p>There may be very good reasons to keep elementary mathematics grounded in real numbers, essentially traditional arithmetic. One is readiness. Educator-mathematicians have argued that the modern brain can handle the abstract concepts developed since the 1700s. That may be true of a fully developed adult brain, but have they considered that the preadolescent brain is not fully developed? Frontal lobe development, which supports higher-level thinking, does not begin until roughly twelve to fourteen years of age.</p>
+
+    <p>Teachers recognized this need for supplementation from the very start of new math. A conversation with an elementary teacher in 2018 confirmed the practice still exists. Teachers work number facts into their lessons whenever they can, much as they always have. The one real difference now is that a present-day teacher risks being caught, since many superintendents formally forbid the practice. Whether individual principals look the other way is a separate question. In our day, no one questioned the individual skill of a teacher making that call.</p>
+
+    <h2>The teacher, then and now</h2>
+
+    <p>That difference says a great deal about the position of teachers in education today. Modern teaching is shaped and controlled by the education establishment. The teacher is no longer viewed as someone with individual professional skill. America now ranks around thirtieth in the world in education, a decline that traces back to the 1960s, the era of change. Since then, higher education has taken an increasing lead role in setting school curriculum, relying less on programs developed by teachers and more on outside expert opinion.</p>
+
+    <p>When we, as teachers, supplemented the new math program with our own sense of what "ease of operations" required, no one stopped us. The honest research of the time acknowledged that good teaching was difficult to define precisely, so teachers were evaluated individually by people with long experience in and around classrooms. There was real confidence in our judgment.</p>
+
+    <p><em>The Silent Voice in Education</em> documents how, in the 1970s and 1980s, states began planning to supervise teachers individually, just as the education establishment started to change how it viewed the profession. Recertification eventually trained teachers to follow what the establishment considered the proper, or better, way of doing things. In its early form, this meant flooding education with behavioral objectives.</p>
+
+    <div class="pullquote">
+      <p>"The instinct of the classroom teacher compensated for the shortcomings of modern mathematics, a curriculum never proven to be superior to arithmetic."</p>
+    </div>
+
+    <p>The broad use of goals and objectives was supposed to produce more efficient instruction. It was promoted as the best available psychological and educational research and stayed popular with state departments of education for years. That particular trend has faded, but teachers and teaching remain more tightly controlled than ever by expert advice and top-down programs that administrators consider helpful. Genuine teacher participation in choosing or evaluating those programs is largely absent from the education scene.</p>
+
+    <h2>What actually helps a child do math</h2>
+
+    <p>A teacher's instinct in mathematics is to give students tools that will serve them in school and in life: quick, reliable ways to add, subtract, multiply, and divide, connected to everyday situations. Something as simple as making change after a purchase can take a surprisingly long time for a student trained only in new math, since pressing a button is not always available as a shortcut.</p>
+
+    <p>My own research into handedness, described elsewhere, led me to think further about frontal lobe development and its relationship to new math. Research indicates that frontal lobe development begins between ages twelve and fourteen and supports higher-level thinking. Frontal lobes were once believed to be fully developed by age eighteen. The newest evidence suggests development continues until roughly age twenty-five. That alone should prompt more thought about varying rates of intellectual development, and about keeping a wider range of educational paths open to students for longer.</p>
+
+    <p>With that in mind, I once asked parents of my special education students, who had faced similar learning difficulties themselves, when school had become easier for them. Sophomore year of high school was the most common answer. It follows a certain logic: frontal lobe development, a natural biological process, has something to do with a student's growing capacity to handle school demands.</p>
+
+    <h2>A question still worth asking</h2>
+
+    <p>The deeper question about readiness for abstract math in preadolescent children has never really been answered. At what point are children's minds ready for abstract concepts? Was that question ever seriously raised before new math was introduced? What happened to the early finding that abstraction was "too abstract for the bottom third of a normal class"? Is the fact that the modern adult mind can handle abstractions developed after the 1700s reason enough to teach those same abstractions at the elementary level, without further insight or testing? A fair question for any elementary math coordinator: what evidence exists that the preadolescent brain can appropriately understand and use these abstractions?</p>
+
+    <p>The Department of Education's "ease of operations" comment was never a strong endorsement of new math skills, nor a broad embrace of its concepts. The controversy has existed since new math first entered the elementary curriculum, and it has never been fully accepted, yet it remains a kind of specter hanging over school systems that want to give their students the best chance at future success.</p>
+
+    <p>The most common compromise has been to blend both approaches. But is that really the best solution, when countries that stayed with traditional methods consistently outscore the United States on international testing? Fewer objectives and more direct experience with problem solving appears to be a real key to their success. There is no obvious reason the same wouldn't be true here. Until there is proof that new math gives preadolescent students a genuine advantage in mathematical thinking, the education establishment should help schools return successfully to arithmetic in elementary school. School boards can lead that effort by demanding real proof that new math belongs in the elementary curriculum, and by placing more trust in classroom teachers' judgment of what to use and how to use it.</p>
+
+    <p>Teachers have believed, since the very beginning of new math, that teaching real operations is far more useful than the redundant renaming of values that abstraction requires. They understood the need for quick, efficient process, which is exactly why elementary teachers kept working math facts into instruction. That practice continues to this day. We now know there was never a good reason to burn the old arithmetic books. The instinct of the classroom teacher compensated for the shortcomings of a curriculum that was never proven superior to the arithmetic it replaced.</p>
+
+    <p>The young boy mentioned at the start of this piece proudly announced he could count to twenty by twos. When asked how many twos made fourteen, he could not answer. Today, he knows his two times table, and he can tell you how many twos are in any number you ask him.</p>
+
+    <p class="source-note">Information in this article can also be found in <em>The Silent Voice in Education</em> by Vincent B. Troiano, published by Rowman &amp; Littlefield.</p>
+
+  </article>
+
+  <!-- BOOK CTA -->
+  <section class="book-cta" aria-label="About the book">
+    <div class="book-cta-inner">
+      <img
+        src="../images/book-cover.jpg"
+        alt="The Silent Voice in Education book cover by Vincent B. Troiano"
+        onerror="this.style.display='none';document.getElementById('cta-ph').style.display='flex'"
+      >
+      <div class="book-cta-ph" id="cta-ph" style="display:none;" aria-hidden="true">Book cover</div>
+      <div>
+        <span class="book-cta-eyebrow">From the Book</span>
+        <h3>The Silent Voice in Education</h3>
+        <p>Vincent B. Troiano taught for 36 years in New Jersey, 27 of them in special education. His book examines how the reforms of the 1960s sidelined classroom teachers, and what it cost the students who could least afford it.</p>
+        <a href="https://buy.thesilentvoiceineducation.com" class="btn-primary" target="_blank" rel="noopener noreferrer">Buy Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div>
+        <span class="footer-brand">The Silent Voice in Education</span>
+        <span class="footer-copy">&copy; 2026 Vincent B. Troiano. All rights reserved.</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://buy.thesilentvoiceineducation.com" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../index.html#author">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
