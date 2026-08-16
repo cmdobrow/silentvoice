@@ -173,6 +173,42 @@
     }
     .nav-links .nav-cta:hover { background: var(--gold-light) !important; }
 
+    .nav-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      padding: 6px;
+      margin-left: 14px;
+      cursor: pointer;
+    }
+    .nav-toggle svg { display: block; width: 22px; height: 22px; }
+    .nav-toggle svg path { stroke: var(--navy); }
+
+    .nav-mobile-panel {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      z-index: 99;
+      flex-direction: column;
+      padding: 8px 24px 16px;
+      box-shadow: 0 8px 24px rgba(13,31,60,0.08);
+    }
+    .nav-mobile-panel.open { display: flex; }
+    .nav-mobile-panel a {
+      padding: 13px 0;
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--navy);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-mobile-panel a:last-child { border-bottom: none; }
+
     /* ---- HERO ---- */
     .hero {
       min-height: 100vh;
@@ -483,12 +519,12 @@
     }
     .footer-brand {
       font-family: 'Playfair Display', serif;
-      font-size: 0.95rem;
+      font-size: 0.8rem;
       font-weight: 700;
       color: var(--navy);
       display: block;
     }
-    .footer-copy { font-size: 0.75rem; color: var(--text-muted); margin-top: 3px; }
+    .footer-copy { font-size: 0.68rem; color: var(--text-muted); margin-top: 3px; }
     .footer-links { display: flex; gap: 24px; }
     .footer-links a { font-size: 0.78rem; color: var(--text-muted); text-decoration: none; transition: color 0.15s; }
     .footer-links a:hover { color: var(--navy); }
@@ -523,6 +559,7 @@
       .blog-grid { grid-template-columns: 1fr; }
       .footer-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
       .nav-links a:not(.nav-cta) { display: none; }
+      .nav-toggle { display: inline-flex; }
       .blog-header { flex-direction: column; align-items: flex-start; gap: 8px; }
     }
   </style>
@@ -540,7 +577,20 @@
         <a href="#blog">Blog</a>
         <!-- Purchase link -->
         <a href="https://buy.thesilentvoiceineducation.com" class="nav-cta" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMobilePanel">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+            <path d="M3 6h18"></path>
+            <path d="M3 12h18"></path>
+            <path d="M3 18h18"></path>
+          </svg>
+        </button>
       </div>
+    </div>
+    <div class="nav-mobile-panel" id="navMobilePanel">
+      <a href="#about">About</a>
+      <a href="#chapters">Chapters</a>
+      <a href="#author">Author</a>
+      <a href="#blog">Blog</a>
     </div>
   </nav>
 
@@ -768,6 +818,22 @@
       });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Mobile hamburger menu
+    const navToggle = document.getElementById('navToggle');
+    const navMobilePanel = document.getElementById('navMobilePanel');
+    if (navToggle && navMobilePanel) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = navMobilePanel.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', isOpen);
+      });
+      navMobilePanel.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMobilePanel.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
   </script>
 
 </body>
