@@ -111,6 +111,8 @@
       font-size: 0.78rem;
       letter-spacing: 0.06em;
       opacity: 1 !important;
+      white-space: nowrap;
+      flex-shrink: 0;
       transition: background 0.2s !important;
     }
     .nav-links .nav-cta:hover { background: var(--gold-light) !important; }
@@ -394,6 +396,9 @@
       .nav-inner { padding: 0 24px; }
       .nav-links a:not(.nav-cta) { display: none; }
       .nav-toggle { display: inline-flex; }
+      .nav-brand { font-size: 0.82rem; }
+      .nav-links { gap: 10px; }
+      .nav-links .nav-cta { padding: 8px 14px; font-size: 0.72rem; }
       .article-header { padding: calc(var(--nav-h) + 48px) 24px 48px; }
       .article-body { padding: 48px 24px 32px; }
       .book-cta { padding: 0 24px 56px; }
