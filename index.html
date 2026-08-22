@@ -4,16 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-METYPGZQNL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-METYPGZQNL');
-</script>
-
   <!-- SEO -->
   <title>The Silent Voice in Education | Vincent B. Troiano</title>
   <meta name="description" content="A 36-year veteran educator examines how the 1960s reform era sidelined classroom teachers and what it cost American students in special education and beyond. By Vincent B. Troiano.">
@@ -473,9 +463,9 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
-      max-width: 360px;
+      max-width: 760px;
     }
-    /* One post now. Widen to 760px for two, or delete the line for three. */
+    /* Two posts now. Delete the max-width line entirely for three. */
     .blog-card {
       background: var(--white);
       border-radius: 4px;
@@ -800,7 +790,18 @@
              and update the href, tag, number, title, and blurb.
              Alternate the image class: c1, c2, c3.
              ============================================ -->
-        <a href="blog/whatever-happened-to-arithmetic.html" class="blog-card reveal">
+        <a href="blog/ease-of-operations-math-commission-report.html" class="blog-card reveal">
+          <div class="blog-card-img c2">
+            <span class="blog-card-tag-wrap">Education History</span>
+            <span class="blog-card-num" aria-hidden="true">02</span>
+          </div>
+          <div class="blog-card-body">
+            <h3>Why Arithmetic Made Algebra Easy, and New Math Didn't</h3>
+            <p>When the 2008 report cited "a lack of ease of operations" in algebra readiness, it was quietly circumventing a simpler word: arithmetic.</p>
+            <span class="blog-read-more">Read more &rarr;</span>
+          </div>
+        </a>
+        <a href="blog/whatever-happened-to-arithmetic.html" class="blog-card reveal reveal-delay-1">
           <div class="blog-card-img c1">
             <span class="blog-card-tag-wrap">Education History</span>
             <span class="blog-card-num" aria-hidden="true">01</span>
@@ -810,7 +811,6 @@
             <p>An eight-year-old came home talking about zeros. Here's how new math replaced arithmetic in American classrooms, and why it never proved itself superior.</p>
             <span class="blog-read-more">Read more &rarr;</span>
           </div>
-        </a>
         </a>
       </div>
     </div>
