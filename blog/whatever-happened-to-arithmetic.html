@@ -416,6 +416,31 @@
     gtag('js', new Date());
 
     gtag('config', 'G-METYPGZQNL');
+
+    // Track purchase-intent clicks even when the first hop stays on our domain.
+    document.addEventListener('click', function (event) {
+      const link = event.target.closest('a[href]');
+      if (!link) return;
+
+      try {
+        const destination = new URL(link.href, window.location.href);
+        const purchaseHosts = new Set([
+          'buy.thesilentvoiceineducation.com',
+          'bloomsbury.com',
+          'www.bloomsbury.com'
+        ]);
+
+        if (!purchaseHosts.has(destination.hostname)) return;
+
+        gtag('event', 'buy_now_click', {
+          link_url: destination.href,
+          link_domain: destination.hostname,
+          link_text: link.textContent.trim()
+        });
+      } catch (error) {
+        // Ignore malformed URLs rather than interfering with navigation.
+      }
+    });
   </script>
 
 </head>
