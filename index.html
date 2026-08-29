@@ -291,7 +291,17 @@
     .hero-text .rule { background: var(--gold); }
     .hero-text p { color: rgba(255,255,255,0.6); font-size: 1rem; max-width: 440px; margin-bottom: 32px; }
     .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-    .hero-text .btn-primary { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+    .hero-text .btn-primary {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--navy);
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 17px 38px;
+      min-width: 150px;
+      text-align: center;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+    }
     .hero-text .btn-primary:hover { background: var(--gold-light); border-color: var(--gold-light); }
     .hero-text .btn-outline { border-color: rgba(255,255,255,0.3); color: var(--white); }
     .hero-text .btn-outline:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.06); }
@@ -609,6 +619,12 @@
       .nav-brand { font-size: 0.82rem; }
       .nav-links { gap: 10px; }
       .nav-links .nav-cta { padding: 8px 14px; font-size: 0.72rem; }
+      .hero-btns .btn-primary {
+        flex: 1 1 100%;
+        width: 100%;
+        font-size: 1.05rem;
+        padding: 17px 28px;
+      }
       .blog-header { flex-direction: column; align-items: flex-start; gap: 8px; }
     }
   </style>
