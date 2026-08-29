@@ -306,6 +306,37 @@
     .hero-text .btn-outline { border-color: rgba(255,255,255,0.3); color: var(--white); }
     .hero-text .btn-outline:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.06); }
 
+    .hero-scroll-cue {
+      position: absolute;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      color: rgba(255,255,255,0.72);
+      text-decoration: none;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      transition: color 0.2s ease;
+    }
+    .hero-scroll-cue:hover { color: var(--gold-light); }
+    .hero-scroll-cue svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--gold-light);
+      animation: cue-bob 1.8s ease-in-out infinite;
+    }
+    @keyframes cue-bob {
+      0%, 100% { transform: translateY(0); opacity: 0.72; }
+      50% { transform: translateY(5px); opacity: 1; }
+    }
+
     .hero-visual {
       display: flex;
       align-items: center;
@@ -595,7 +626,7 @@
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; min-height: auto; padding-top: var(--nav-h); }
       .hero-text { padding: 60px 32px 40px; }
-      .hero-visual { padding: 0 32px 60px; justify-content: flex-start; }
+      .hero-visual { padding: 0 32px 96px; justify-content: flex-start; }
       .synopsis-inner { grid-template-columns: 1fr; gap: 40px; }
       .author-inner { grid-template-columns: 1fr; gap: 40px; }
       .author-photo { max-width: 220px; }
@@ -670,7 +701,6 @@
       <p>A 36-year veteran educator examines how the 1960s reform era sidelined classroom teachers -- and what it cost American students in special education and beyond.</p>
       <div class="hero-btns">
         <a href="https://buy.thesilentvoiceineducation.com" class="btn-primary" target="_blank" rel="noopener noreferrer">Buy Now</a>
-        <a href="#about" class="btn-outline">Read the synopsis</a>
       </div>
     </div>
     <div class="hero-visual">
@@ -692,6 +722,13 @@
         Place book-cover.jpg<br>in the images/ folder
       </div>
     </div>
+    <a href="#about" class="hero-scroll-cue" aria-label="Continue to the synopsis">
+      <span>Continue to the synopsis</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M7 9l5 5 5-5"></path>
+        <path d="M7 14l5 5 5-5"></path>
+      </svg>
+    </a>
   </section>
 
 
