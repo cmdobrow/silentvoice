@@ -1240,6 +1240,122 @@
       }
     }
 
+
+    /* ============================================================
+       V9 MOBILE HERO — compact editorial purchase composition
+       Keeps the book and primary CTA together above the fold.
+       ============================================================ */
+    @media (max-width: 640px) {
+      /* The hero CTA is now the primary mobile purchase action. */
+      .nav-links .nav-cta { display: none; }
+      .nav-inner { padding: 0 20px; }
+      .nav-brand { font-size: 0.88rem; }
+
+      .hero {
+        min-height: 100svh;
+        align-items: start;
+      }
+      .hero-text {
+        padding: 22px 20px 14px;
+      }
+      .hero-text h1 {
+        max-width: 350px;
+        font-size: clamp(2.15rem, 9.2vw, 2.55rem);
+        line-height: 0.99;
+        letter-spacing: -0.025em;
+        margin-bottom: 10px;
+      }
+      .hero-book-title {
+        margin-top: 8px;
+        font-size: 0.93rem;
+        line-height: 1.25;
+      }
+      .hero-deck {
+        max-width: 350px !important;
+        margin-top: 12px !important;
+        font-size: 0.88rem !important;
+        line-height: 1.48 !important;
+        color: rgba(255,255,255,0.68) !important;
+      }
+
+      .hero-mobile-product {
+        display: grid;
+        grid-template-columns: minmax(128px, 42%) minmax(0, 1fr);
+        gap: 20px;
+        align-items: center;
+        width: 100%;
+        max-width: 360px;
+        margin: 17px 0 0;
+        padding: 16px 0 15px;
+        border-top: 1px solid rgba(215,169,75,0.34);
+        border-bottom: 1px solid rgba(215,169,75,0.24);
+        text-align: left;
+      }
+      .hero-mobile-cover-wrap {
+        width: 100%;
+        justify-content: flex-start;
+      }
+      .hero-mobile-cover-wrap::after { display: none; }
+      .hero-mobile-cover-wrap img {
+        width: min(100%, 148px);
+        max-width: 148px;
+        border-radius: 2px;
+        box-shadow: 7px 9px 0 rgba(184,135,46,0.15), 0 14px 28px rgba(0,0,0,0.35);
+      }
+      .hero-mobile-actions {
+        min-width: 0;
+        padding-left: 18px;
+        border-left: 1px solid rgba(215,169,75,0.30);
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+      }
+      .hero-mobile-label {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--gold-light);
+        font-size: 0.66rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .hero-mobile-buy {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 13px 13px !important;
+        border-radius: 3px;
+        font-size: 0.84rem !important;
+        letter-spacing: 0.045em;
+        line-height: 1.2;
+        box-shadow: 0 8px 18px rgba(0,0,0,0.20);
+        white-space: nowrap;
+      }
+      .hero-mobile-buy span { margin-left: 5px; }
+
+      .hero-scroll-cue {
+        margin: 10px auto 5px;
+        font-size: 0.61rem;
+        gap: 2px;
+      }
+      .hero-scroll-cue svg { width: 18px; height: 18px; }
+    }
+
+    @media (max-width: 370px) {
+      .hero-text { padding-left: 17px; padding-right: 17px; }
+      .hero-mobile-product {
+        grid-template-columns: 120px minmax(0, 1fr);
+        gap: 15px;
+      }
+      .hero-mobile-cover-wrap img { width: 120px; }
+      .hero-mobile-actions { padding-left: 14px; }
+      .hero-mobile-buy {
+        font-size: 0.78rem !important;
+        padding: 12px 9px !important;
+      }
+    }
+
 </style>
 </head>
 <body>
@@ -1294,7 +1410,10 @@
         <div class="hero-mobile-cover-wrap">
           <img src="images/book-cover.jpg" alt="The Silent Voice in Education book cover by Vincent B. Troiano">
         </div>
-        <a href="https://buy.thesilentvoiceineducation.com" class="btn-primary hero-mobile-buy" data-buy-location="hero" target="_blank" rel="noopener noreferrer">Buy the Book <span aria-hidden="true">→</span></a>
+        <div class="hero-mobile-actions">
+          <span class="hero-mobile-label">The book</span>
+          <a href="https://buy.thesilentvoiceineducation.com" class="btn-primary hero-mobile-buy" data-buy-location="hero" target="_blank" rel="noopener noreferrer">Buy the Book <span aria-hidden="true">→</span></a>
+        </div>
       </div>
     </div>
     <div class="hero-visual">

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google tag (gtag.js) -->
-
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-METYPGZQNL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -74,9 +74,9 @@
   }
   </script>
 
-  
-  
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -541,9 +541,8 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
-      max-width: 760px;
     }
-    /* Two posts now. Delete the max-width line entirely for three. */
+    /* Three live posts; the grid expands naturally across the available width. */
     .blog-card {
       background: var(--white);
       border-radius: 4px;
@@ -1039,15 +1038,15 @@
       }
 
       .hero-mobile-product {
-        grid-template-columns: minmax(118px, 38%) minmax(0, 1fr);
-        gap: 16px;
+        grid-template-columns: clamp(136px, 39vw, 158px) minmax(0, 1fr);
+        gap: 18px;
         margin-top: 14px;
-        padding: 16px;
-        border-radius: 8px;
+        padding: 0;
       }
 
       .hero-mobile-cover-wrap img {
-        width: min(100%, 146px);
+        width: 100%;
+        max-width: 158px;
         box-shadow: 8px 8px 0 rgba(184,135,46,0.20), 0 16px 32px rgba(0,0,0,0.40);
       }
 
@@ -1058,6 +1057,14 @@
 
       .hero-mobile-buy { padding: 13px 10px !important; font-size: 0.88rem !important; }
       .hero-scroll-cue { margin-top: 8px; margin-bottom: 10px; }
+    }
+
+    @media (max-width: 340px) {
+      .hero-mobile-product {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-mobile-cover-wrap img { width: 158px; }
     }
 
 
@@ -1233,6 +1240,122 @@
       }
     }
 
+
+    /* ============================================================
+       V9 MOBILE HERO — compact editorial purchase composition
+       Keeps the book and primary CTA together above the fold.
+       ============================================================ */
+    @media (max-width: 640px) {
+      /* The hero CTA is now the primary mobile purchase action. */
+      .nav-links .nav-cta { display: none; }
+      .nav-inner { padding: 0 20px; }
+      .nav-brand { font-size: 0.88rem; }
+
+      .hero {
+        min-height: 100svh;
+        align-items: start;
+      }
+      .hero-text {
+        padding: 22px 20px 14px;
+      }
+      .hero-text h1 {
+        max-width: 350px;
+        font-size: clamp(2.15rem, 9.2vw, 2.55rem);
+        line-height: 0.99;
+        letter-spacing: -0.025em;
+        margin-bottom: 10px;
+      }
+      .hero-book-title {
+        margin-top: 8px;
+        font-size: 0.93rem;
+        line-height: 1.25;
+      }
+      .hero-deck {
+        max-width: 350px !important;
+        margin-top: 12px !important;
+        font-size: 0.88rem !important;
+        line-height: 1.48 !important;
+        color: rgba(255,255,255,0.68) !important;
+      }
+
+      .hero-mobile-product {
+        display: grid;
+        grid-template-columns: minmax(128px, 42%) minmax(0, 1fr);
+        gap: 20px;
+        align-items: center;
+        width: 100%;
+        max-width: 360px;
+        margin: 17px 0 0;
+        padding: 16px 0 15px;
+        border-top: 1px solid rgba(215,169,75,0.34);
+        border-bottom: 1px solid rgba(215,169,75,0.24);
+        text-align: left;
+      }
+      .hero-mobile-cover-wrap {
+        width: 100%;
+        justify-content: flex-start;
+      }
+      .hero-mobile-cover-wrap::after { display: none; }
+      .hero-mobile-cover-wrap img {
+        width: min(100%, 148px);
+        max-width: 148px;
+        border-radius: 2px;
+        box-shadow: 7px 9px 0 rgba(184,135,46,0.15), 0 14px 28px rgba(0,0,0,0.35);
+      }
+      .hero-mobile-actions {
+        min-width: 0;
+        padding-left: 18px;
+        border-left: 1px solid rgba(215,169,75,0.30);
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+      }
+      .hero-mobile-label {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--gold-light);
+        font-size: 0.66rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .hero-mobile-buy {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 13px 13px !important;
+        border-radius: 3px;
+        font-size: 0.84rem !important;
+        letter-spacing: 0.045em;
+        line-height: 1.2;
+        box-shadow: 0 8px 18px rgba(0,0,0,0.20);
+        white-space: nowrap;
+      }
+      .hero-mobile-buy span { margin-left: 5px; }
+
+      .hero-scroll-cue {
+        margin: 10px auto 5px;
+        font-size: 0.61rem;
+        gap: 2px;
+      }
+      .hero-scroll-cue svg { width: 18px; height: 18px; }
+    }
+
+    @media (max-width: 370px) {
+      .hero-text { padding-left: 17px; padding-right: 17px; }
+      .hero-mobile-product {
+        grid-template-columns: 120px minmax(0, 1fr);
+        gap: 15px;
+      }
+      .hero-mobile-cover-wrap img { width: 120px; }
+      .hero-mobile-actions { padding-left: 14px; }
+      .hero-mobile-buy {
+        font-size: 0.78rem !important;
+        padding: 12px 9px !important;
+      }
+    }
+
 </style>
 </head>
 <body>
@@ -1287,7 +1410,10 @@
         <div class="hero-mobile-cover-wrap">
           <img src="images/book-cover.jpg" alt="The Silent Voice in Education book cover by Vincent B. Troiano">
         </div>
-        <a href="https://buy.thesilentvoiceineducation.com" class="btn-primary hero-mobile-buy" data-buy-location="hero" target="_blank" rel="noopener noreferrer">Buy the Book <span aria-hidden="true">→</span></a>
+        <div class="hero-mobile-actions">
+          <span class="hero-mobile-label">The book</span>
+          <a href="https://buy.thesilentvoiceineducation.com" class="btn-primary hero-mobile-buy" data-buy-location="hero" target="_blank" rel="noopener noreferrer">Buy the Book <span aria-hidden="true">→</span></a>
+        </div>
       </div>
     </div>
     <div class="hero-visual">
@@ -1477,7 +1603,18 @@
              and update the href, tag, number, title, and blurb.
              Alternate the image class: c1, c2, c3.
              ============================================ -->
-        <a href="blog/ease-of-operations-math-commission-report.html" class="blog-card reveal">
+        <a href="blog/new-leadership-in-education.html" class="blog-card reveal">
+          <div class="blog-card-img c3">
+            <span class="blog-card-tag-wrap">Education Reform</span>
+            <span class="blog-card-num" aria-hidden="true">03</span>
+          </div>
+          <div class="blog-card-body">
+            <h3>New Leadership in Education</h3>
+            <p>How outside influence from higher education, new math, administrative hiring, middle schools, and changing reading programs began reshaping elementary education.</p>
+            <span class="blog-read-more">Read more &rarr;</span>
+          </div>
+        </a>
+        <a href="blog/ease-of-operations-math-commission-report.html" class="blog-card reveal reveal-delay-1">
           <div class="blog-card-img c2">
             <span class="blog-card-tag-wrap">Education History</span>
             <span class="blog-card-num" aria-hidden="true">02</span>
@@ -1488,7 +1625,7 @@
             <span class="blog-read-more">Read more &rarr;</span>
           </div>
         </a>
-        <a href="blog/whatever-happened-to-arithmetic.html" class="blog-card reveal reveal-delay-1">
+        <a href="blog/whatever-happened-to-arithmetic.html" class="blog-card reveal reveal-delay-2">
           <div class="blog-card-img c1">
             <span class="blog-card-tag-wrap">Education History</span>
             <span class="blog-card-num" aria-hidden="true">01</span>
