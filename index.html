@@ -1066,6 +1066,180 @@
       }
       .hero-mobile-cover-wrap img { width: 158px; }
     }
+
+
+    /* ============================================================
+       V8 MOBILE HERO POLISH
+       A simpler editorial composition: one large book, one clear CTA.
+       ============================================================ */
+    @media (max-width: 900px) {
+      .hero-text {
+        max-width: 680px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .hero-mobile-product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 390px;
+        margin: 24px auto 0;
+        gap: 0;
+        text-align: center;
+      }
+
+      .hero-mobile-cover-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+      }
+
+      .hero-mobile-cover-wrap::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -20px;
+        width: 72%;
+        height: 28px;
+        transform: translateX(-50%);
+        background: rgba(0,0,0,0.30);
+        filter: blur(18px);
+        border-radius: 50%;
+        z-index: -1;
+      }
+
+      .hero-mobile-cover-wrap img {
+        width: clamp(205px, 44vw, 245px);
+        max-width: none;
+        height: auto;
+        border-radius: 3px;
+        box-shadow: 14px 14px 0 rgba(184,135,46,0.18), 0 28px 54px rgba(0,0,0,0.46);
+      }
+
+      .hero-mobile-buy {
+        width: min(100%, 330px) !important;
+        margin-top: 32px;
+        padding: 16px 24px !important;
+        border-radius: 4px;
+        font-size: 1rem !important;
+        font-weight: 700;
+        letter-spacing: 0.055em;
+        box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+      }
+
+      .hero-mobile-buy span {
+        display: inline-block;
+        margin-left: 8px;
+        transition: transform 0.2s ease;
+      }
+
+      .hero-mobile-buy:hover span { transform: translateX(3px); }
+
+      .hero-scroll-cue {
+        margin: 22px auto 8px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-text {
+        padding: 28px 22px 14px;
+      }
+
+      .hero-text h1 {
+        font-size: clamp(2.35rem, 10.8vw, 3rem);
+        line-height: 1.03;
+        margin-bottom: 14px;
+      }
+
+      .hero-book-title {
+        margin-bottom: 5px;
+      }
+
+      .hero-subtitle {
+        line-height: 1.45;
+        margin-bottom: 14px;
+      }
+
+      .hero-text .rule {
+        margin: 14px 0 16px;
+      }
+
+      .hero-deck {
+        font-size: 0.94rem !important;
+        line-height: 1.58 !important;
+        margin-bottom: 0 !important;
+      }
+
+      .hero-mobile-product {
+        max-width: 350px;
+        margin-top: 24px;
+      }
+
+      .hero-mobile-cover-wrap img {
+        width: clamp(205px, 58vw, 235px);
+        max-width: none;
+        box-shadow: 12px 12px 0 rgba(184,135,46,0.18), 0 24px 44px rgba(0,0,0,0.44);
+      }
+
+      .hero-mobile-buy {
+        width: min(100%, 310px) !important;
+        margin-top: 30px;
+        padding: 15px 22px !important;
+        font-size: 0.98rem !important;
+      }
+
+      .hero-scroll-cue {
+        margin-top: 20px;
+        margin-bottom: 8px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .hero-mobile-cover-wrap img { width: 195px; }
+      .hero-mobile-buy { max-width: 290px; }
+    }
+
+
+
+    /* V8.1 MOBILE EDITORIAL CLEANUP */
+    @media (max-width: 640px) {
+      .hero-text > .eyebrow,
+      .hero-subtitle,
+      .hero-text > .rule {
+        display: none;
+      }
+
+      .hero-text {
+        padding-top: 30px;
+      }
+
+      .hero-book-title {
+        margin-top: 14px;
+        margin-bottom: 0;
+        font-size: 1rem;
+      }
+
+      .hero-deck {
+        margin-top: 18px !important;
+      }
+
+      .hero-mobile-product {
+        margin-top: 22px;
+      }
+
+      .hero-mobile-cover-wrap img {
+        width: clamp(190px, 53vw, 215px);
+      }
+
+      .hero-mobile-buy {
+        width: min(100%, 292px) !important;
+        margin-top: 28px;
+      }
+    }
+
 </style>
 </head>
 <body>
@@ -1108,10 +1282,9 @@
       <p class="hero-subtitle">The Importance of Involving Classroom Teachers</p>
       <div class="rule" aria-hidden="true"></div>
       <p class="hero-deck">After 36 years in education, Vincent B. Troiano examines what changed when classroom teachers became less influential in the decisions shaping their own classrooms.</p>
-      <div class="hero-proofline hero-desktop-actions" aria-label="Author and book credentials">
+      <div class="hero-proofline hero-desktop-actions" aria-label="Author credentials">
         <span>36 years in education</span>
         <span>27 years in special education</span>
-        <span>130 pages</span>
       </div>
       <div class="hero-btns hero-desktop-actions">
         <a href="https://buy.thesilentvoiceineducation.com" class="btn-primary" data-buy-location="hero" target="_blank" rel="noopener noreferrer">Buy the Book</a>
@@ -1121,10 +1294,7 @@
         <div class="hero-mobile-cover-wrap">
           <img src="images/book-cover.jpg" alt="The Silent Voice in Education book cover by Vincent B. Troiano">
         </div>
-        <div class="hero-mobile-product-copy">
-          <div class="hero-mobile-kicker">A veteran educator's perspective</div>
-          <a href="https://buy.thesilentvoiceineducation.com" class="btn-primary hero-mobile-buy" data-buy-location="hero" target="_blank" rel="noopener noreferrer">Buy the Book</a>
-        </div>
+        <a href="https://buy.thesilentvoiceineducation.com" class="btn-primary hero-mobile-buy" data-buy-location="hero" target="_blank" rel="noopener noreferrer">Buy the Book <span aria-hidden="true">→</span></a>
       </div>
     </div>
     <div class="hero-visual">
