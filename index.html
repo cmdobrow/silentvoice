@@ -541,9 +541,8 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
-      max-width: 760px;
     }
-    /* Two posts now. Delete the max-width line entirely for three. */
+    /* Three live posts; the grid expands naturally across the available width. */
     .blog-card {
       background: var(--white);
       border-radius: 4px;
@@ -1417,7 +1416,18 @@
              and update the href, tag, number, title, and blurb.
              Alternate the image class: c1, c2, c3.
              ============================================ -->
-        <a href="blog/ease-of-operations-math-commission-report.html" class="blog-card reveal">
+        <a href="blog/new-leadership-in-education.html" class="blog-card reveal">
+          <div class="blog-card-img c3">
+            <span class="blog-card-tag-wrap">Education Reform</span>
+            <span class="blog-card-num" aria-hidden="true">03</span>
+          </div>
+          <div class="blog-card-body">
+            <h3>New Leadership in Education</h3>
+            <p>How outside influence from higher education, new math, administrative hiring, middle schools, and changing reading programs began reshaping elementary education.</p>
+            <span class="blog-read-more">Read more &rarr;</span>
+          </div>
+        </a>
+        <a href="blog/ease-of-operations-math-commission-report.html" class="blog-card reveal reveal-delay-1">
           <div class="blog-card-img c2">
             <span class="blog-card-tag-wrap">Education History</span>
             <span class="blog-card-num" aria-hidden="true">02</span>
@@ -1428,7 +1438,7 @@
             <span class="blog-read-more">Read more &rarr;</span>
           </div>
         </a>
-        <a href="blog/whatever-happened-to-arithmetic.html" class="blog-card reveal reveal-delay-1">
+        <a href="blog/whatever-happened-to-arithmetic.html" class="blog-card reveal reveal-delay-2">
           <div class="blog-card-img c1">
             <span class="blog-card-tag-wrap">Education History</span>
             <span class="blog-card-num" aria-hidden="true">01</span>
