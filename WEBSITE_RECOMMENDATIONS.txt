@@ -4,7 +4,7 @@ THE SILENT VOICE IN EDUCATION — WEBSITE CONVERSION RECOMMENDATIONS
 The homepage now opens with “What happened to the teacher’s voice?” so people coming from the Facebook ad immediately see the same issue that interested them in the first place.
 
 2. Put Vincent’s credibility above the fold.
-The first screen now makes his 36 years in education and 27 years in special education impossible to miss. The 130-page length is also shown to make the book feel approachable.
+The opening copy establishes his 36 years in education immediately. On desktop, the concise experience line reinforces his credibility without repeating the same statistics in a second card section; mobile keeps the presentation intentionally simpler.
 
 3. Make the first explanation easier to scan.
 Instead of asking a new visitor to read several long paragraphs immediately, the page now summarizes the book in three short idea cards: teacher voice, special education, and local control. The original detailed synopsis is still available below as optional reading.
@@ -35,3 +35,7 @@ Google Analytics now records when visitors reach the synopsis, author section, a
 
 12. Improve Buy Now analytics.
 Every purchase-intent click remains tracked as buy_now_click, and the event now records where the click came from (navigation, hero, endorsement area, after the contents, or footer). That will tell us which page position actually drives buying intent.
+
+
+LATEST REFINEMENT
+The redundant gold statistics strip below the hero was removed, the mobile purchase block was simplified to the book cover, a short veteran-educator cue and the Buy button, and format-specific “paperback and ebook” notes were removed so the page does not imply that other editions are unavailable.

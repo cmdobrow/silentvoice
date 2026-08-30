@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-METYPGZQNL"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -74,9 +74,9 @@
   }
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  
+  
 
   <style>
     :root {
@@ -541,8 +541,9 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
+      max-width: 760px;
     }
-    /* Three live posts; the grid expands naturally across the available width. */
+    /* Two posts now. Delete the max-width line entirely for three. */
     .blog-card {
       background: var(--white);
       border-radius: 4px;
@@ -1038,15 +1039,15 @@
       }
 
       .hero-mobile-product {
-        grid-template-columns: clamp(136px, 39vw, 158px) minmax(0, 1fr);
-        gap: 18px;
+        grid-template-columns: minmax(118px, 38%) minmax(0, 1fr);
+        gap: 16px;
         margin-top: 14px;
-        padding: 0;
+        padding: 16px;
+        border-radius: 8px;
       }
 
       .hero-mobile-cover-wrap img {
-        width: 100%;
-        max-width: 158px;
+        width: min(100%, 146px);
         box-shadow: 8px 8px 0 rgba(184,135,46,0.20), 0 16px 32px rgba(0,0,0,0.40);
       }
 
@@ -1057,14 +1058,6 @@
 
       .hero-mobile-buy { padding: 13px 10px !important; font-size: 0.88rem !important; }
       .hero-scroll-cue { margin-top: 8px; margin-bottom: 10px; }
-    }
-
-    @media (max-width: 340px) {
-      .hero-mobile-product {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-      .hero-mobile-cover-wrap img { width: 158px; }
     }
 </style>
 </head>
@@ -1314,18 +1307,7 @@
              and update the href, tag, number, title, and blurb.
              Alternate the image class: c1, c2, c3.
              ============================================ -->
-        <a href="blog/new-leadership-in-education.html" class="blog-card reveal">
-          <div class="blog-card-img c3">
-            <span class="blog-card-tag-wrap">Education Reform</span>
-            <span class="blog-card-num" aria-hidden="true">03</span>
-          </div>
-          <div class="blog-card-body">
-            <h3>New Leadership in Education</h3>
-            <p>How outside influence from higher education, new math, administrative hiring, middle schools, and changing reading programs began reshaping elementary education.</p>
-            <span class="blog-read-more">Read more &rarr;</span>
-          </div>
-        </a>
-        <a href="blog/ease-of-operations-math-commission-report.html" class="blog-card reveal reveal-delay-1">
+        <a href="blog/ease-of-operations-math-commission-report.html" class="blog-card reveal">
           <div class="blog-card-img c2">
             <span class="blog-card-tag-wrap">Education History</span>
             <span class="blog-card-num" aria-hidden="true">02</span>
@@ -1336,7 +1318,7 @@
             <span class="blog-read-more">Read more &rarr;</span>
           </div>
         </a>
-        <a href="blog/whatever-happened-to-arithmetic.html" class="blog-card reveal reveal-delay-2">
+        <a href="blog/whatever-happened-to-arithmetic.html" class="blog-card reveal reveal-delay-1">
           <div class="blog-card-img c1">
             <span class="blog-card-tag-wrap">Education History</span>
             <span class="blog-card-num" aria-hidden="true">01</span>
