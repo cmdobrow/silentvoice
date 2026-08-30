@@ -1356,6 +1356,183 @@
       }
     }
 
+
+
+    /* ============================================================
+       V10 MOBILE HERO — integrated product card
+       The cover and CTA are one clean, balanced unit with no filler label.
+       ============================================================ */
+    @media (max-width: 640px) {
+      .hero {
+        min-height: 100svh;
+      }
+
+      .hero-text {
+        padding: 24px 20px 12px;
+      }
+
+      .hero-text h1 {
+        max-width: 360px;
+        font-size: clamp(2.08rem, 9vw, 2.48rem);
+        line-height: 1.01;
+        letter-spacing: -0.024em;
+        margin-bottom: 11px;
+      }
+
+      .hero-book-title {
+        margin-top: 7px;
+        font-size: 0.92rem;
+        line-height: 1.25;
+      }
+
+      .hero-deck {
+        max-width: 365px !important;
+        margin-top: 13px !important;
+        font-size: 0.86rem !important;
+        line-height: 1.46 !important;
+        color: rgba(255,255,255,0.67) !important;
+      }
+
+      .hero-mobile-product {
+        display: grid;
+        grid-template-columns: 132px minmax(0, 1fr);
+        gap: 18px;
+        align-items: center;
+        width: 100%;
+        max-width: 372px;
+        margin: 18px 0 0;
+        padding: 14px;
+        border: 1px solid rgba(255,255,255,0.11);
+        border-radius: 10px;
+        background: rgba(255,255,255,0.045);
+        box-shadow: 0 16px 36px rgba(0,0,0,0.16);
+        text-align: left;
+      }
+
+      .hero-mobile-cover-wrap {
+        width: 132px;
+        display: block;
+      }
+
+      .hero-mobile-cover-wrap::after { display: none; }
+
+      .hero-mobile-cover-wrap img {
+        display: block;
+        width: 132px;
+        max-width: 132px;
+        height: auto;
+        border-radius: 3px;
+        box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+      }
+
+      .hero-mobile-actions {
+        min-width: 0;
+        padding: 0;
+        border: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero-mobile-label { display: none !important; }
+
+      .hero-mobile-buy {
+        width: 100% !important;
+        max-width: 182px !important;
+        margin: 0 !important;
+        padding: 14px 12px !important;
+        border-radius: 5px;
+        font-size: 0.88rem !important;
+        font-weight: 700;
+        letter-spacing: 0.035em;
+        line-height: 1.2;
+        box-shadow: 0 9px 20px rgba(0,0,0,0.18);
+        white-space: nowrap;
+      }
+
+      .hero-mobile-buy span {
+        margin-left: 7px;
+        font-size: 1.05em;
+      }
+
+      .hero-scroll-cue {
+        margin: 13px auto 4px;
+        font-size: 0.60rem;
+        gap: 2px;
+      }
+
+      .hero-scroll-cue svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    @media (max-width: 370px) {
+      .hero-text { padding-left: 17px; padding-right: 17px; }
+      .hero-mobile-product {
+        grid-template-columns: 116px minmax(0, 1fr);
+        gap: 14px;
+        padding: 12px;
+      }
+      .hero-mobile-cover-wrap,
+      .hero-mobile-cover-wrap img {
+        width: 116px;
+        max-width: 116px;
+      }
+      .hero-mobile-buy {
+        max-width: 165px !important;
+        font-size: 0.81rem !important;
+        padding: 13px 9px !important;
+      }
+    }
+
+
+
+    /* V10.1 MOBILE HERO REFINEMENT — move the explanatory deck into the purchase card */
+    .hero-mobile-deck { display: none; }
+    @media (max-width: 640px) {
+      .hero { min-height: auto; }
+      .hero-text { padding-bottom: 18px; }
+      .hero-text > .hero-deck { display: none; }
+
+      .hero-mobile-product {
+        grid-template-columns: 134px minmax(0, 1fr);
+        gap: 17px;
+        max-width: 377px;
+        margin-top: 18px;
+        padding: 14px;
+      }
+      .hero-mobile-cover-wrap,
+      .hero-mobile-cover-wrap img {
+        width: 134px;
+        max-width: 134px;
+      }
+      .hero-mobile-actions {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+      }
+      .hero-mobile-deck {
+        display: block;
+        color: rgba(255,255,255,0.68);
+        font-size: 0.77rem;
+        line-height: 1.42;
+        margin: 0 0 13px;
+      }
+      .hero-mobile-buy {
+        max-width: none !important;
+      }
+      .hero-scroll-cue {
+        margin: 13px auto 2px;
+      }
+    }
+    @media (max-width: 370px) {
+      .hero-mobile-product { grid-template-columns: 116px minmax(0, 1fr); gap: 13px; }
+      .hero-mobile-cover-wrap,
+      .hero-mobile-cover-wrap img { width: 116px; max-width: 116px; }
+      .hero-mobile-deck { font-size: 0.72rem; line-height: 1.38; margin-bottom: 10px; }
+    }
+
 </style>
 </head>
 <body>
@@ -1411,7 +1588,7 @@
           <img src="images/book-cover.jpg" alt="The Silent Voice in Education book cover by Vincent B. Troiano">
         </div>
         <div class="hero-mobile-actions">
-          <span class="hero-mobile-label">The book</span>
+          <p class="hero-mobile-deck">After 36 years in education, Vincent B. Troiano examines what changed when classroom teachers became less influential in the decisions shaping their own classrooms.</p>
           <a href="https://buy.thesilentvoiceineducation.com" class="btn-primary hero-mobile-buy" data-buy-location="hero" target="_blank" rel="noopener noreferrer">Buy the Book <span aria-hidden="true">→</span></a>
         </div>
       </div>
