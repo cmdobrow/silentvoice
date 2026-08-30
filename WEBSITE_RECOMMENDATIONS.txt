@@ -1,0 +1,37 @@
+THE SILENT VOICE IN EDUCATION — WEBSITE CONVERSION RECOMMENDATIONS
+
+1. Lead with the idea that earned the click.
+The homepage now opens with “What happened to the teacher’s voice?” so people coming from the Facebook ad immediately see the same issue that interested them in the first place.
+
+2. Put Vincent’s credibility above the fold.
+The first screen now makes his 36 years in education and 27 years in special education impossible to miss. The 130-page length is also shown to make the book feel approachable.
+
+3. Make the first explanation easier to scan.
+Instead of asking a new visitor to read several long paragraphs immediately, the page now summarizes the book in three short idea cards: teacher voice, special education, and local control. The original detailed synopsis is still available below as optional reading.
+
+4. Add independent social proof earlier.
+A teacher endorsement is now placed immediately after the short book overview, before visitors have to scroll through the rest of the page.
+
+5. Add a strong Buy button where interest is highest.
+There is now a prominent purchase call-to-action directly beside the endorsement, plus another purchase opportunity after the book-content section. Visitors no longer have to hunt for a way to buy after becoming interested.
+
+6. Explain who Vincent is before showing the full table of contents.
+The author section now appears earlier in the page. For a first-time visitor, understanding why Vincent is qualified to write the book is more persuasive than seeing a long chapter list immediately.
+
+7. Simplify the chapter section.
+The page first shows six easy-to-scan themes from the book. The complete table of contents is still available, but it expands only when a visitor asks to see it.
+
+8. Correct the table of contents.
+The chapter numbering was updated to match the publisher’s official listing, including the Preface, Introduction, Chapters 1–14, and Epilogue.
+
+9. Improve the mobile first screen.
+The mobile hero is shorter, the book cover is smaller, spacing is tighter, and the main Buy button remains full-width. This is especially important because Reels produced some of the campaign’s most efficient traffic.
+
+10. Keep the design identity, but improve the hierarchy.
+The navy, gold, cream, typography, author photo, and book artwork remain intact. The redesign focuses on what visitors see first and the order in which they receive information, rather than changing the brand.
+
+11. Add better engagement tracking.
+Google Analytics now records when visitors reach the synopsis, author section, and book-content section, plus 25%, 50%, 75%, and 90% scroll depth. It also records when visitors open the full synopsis or full table of contents. This will make the next ad campaign much easier to diagnose.
+
+12. Improve Buy Now analytics.
+Every purchase-intent click remains tracked as buy_now_click, and the event now records where the click came from (navigation, hero, endorsement area, after the contents, or footer). That will tell us which page position actually drives buying intent.

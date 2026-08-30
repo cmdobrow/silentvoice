@@ -31,7 +31,8 @@
         gtag('event', 'buy_now_click', {
           link_url: destination.href,
           link_domain: destination.hostname,
-          link_text: link.textContent.trim()
+          link_text: link.textContent.trim(),
+          buy_location: link.dataset.buyLocation || 'unspecified'
         });
       } catch (error) {
         // Ignore malformed URLs rather than interfering with navigation.
@@ -50,7 +51,8 @@
   <meta property="og:description" content="A veteran educator's landmark work on how 1960s school reforms sidelined classroom teachers -- and what it cost American students.">
   <meta property="og:type" content="book">
   <meta property="og:image" content="images/book-cover.jpg">
-  <meta property="og:url" content="https://yourdomainhere.com">
+  <meta property="og:url" content="https://thesilentvoiceineducation.com/">
+  <link rel="canonical" href="https://thesilentvoiceineducation.com/">
 
   <!-- Schema.org Book Structured Data -->
   <script type="application/ld+json">
@@ -658,6 +660,361 @@
       }
       .blog-header { flex-direction: column; align-items: flex-start; gap: 8px; }
     }
+
+
+    /* ============================================================
+       V4 CONVERSION-FOCUSED HOMEPAGE
+       Keeps the original navy / gold / cream identity while making
+       the page faster to scan for cold paid-social visitors.
+       ============================================================ */
+    .hero {
+      min-height: min(820px, 100vh);
+      grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
+    }
+    .hero-text { padding-top: 64px; padding-bottom: 72px; }
+    .hero-text .eyebrow { margin-bottom: 14px; }
+    .hero-text h1 {
+      max-width: 620px;
+      font-size: clamp(2.45rem, 5vw, 4.35rem);
+      line-height: 1.02;
+      margin-bottom: 16px;
+    }
+    .hero-book-title {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold-light);
+      font-size: clamp(1.08rem, 2vw, 1.35rem);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .hero-subtitle { margin-bottom: 18px; }
+    .hero-deck {
+      max-width: 560px !important;
+      font-size: 1.02rem !important;
+      line-height: 1.68 !important;
+      margin-bottom: 20px !important;
+    }
+    .hero-proofline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      margin: 0 0 26px;
+      color: rgba(255,255,255,0.88);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.025em;
+    }
+    .hero-proofline span { position: relative; }
+    .hero-proofline span:not(:last-child)::after {
+      content: '';
+      width: 3px;
+      height: 3px;
+      background: var(--gold-light);
+      border-radius: 50%;
+      position: absolute;
+      right: -11px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .hero-visual img, .hero-visual .book-ph { width: clamp(210px, 25vw, 310px); }
+    .hero-scroll-cue { bottom: 14px; }
+
+    .trust-strip {
+      background: var(--gold);
+      border-bottom: 1px solid rgba(13,31,60,0.12);
+    }
+    .trust-strip-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 0 40px;
+    }
+    .trust-item {
+      min-height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      text-align: left;
+      padding: 18px 30px;
+      border-right: 1px solid rgba(13,31,60,0.16);
+    }
+    .trust-item:last-child { border-right: 0; }
+    .trust-number {
+      font-family: 'Playfair Display', serif;
+      color: var(--navy);
+      font-size: 1.85rem;
+      line-height: 1;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .trust-copy {
+      color: rgba(13,31,60,0.72);
+      font-size: 0.75rem;
+      font-weight: 600;
+      line-height: 1.3;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    .synopsis { padding: 88px 0 72px; }
+    .synopsis-intro {
+      max-width: 760px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+    .synopsis-intro h2 { color: var(--navy); margin-bottom: 14px; }
+    .synopsis-intro p { font-size: 1.02rem; line-height: 1.7; }
+    .insight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 34px;
+    }
+    .insight-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--gold);
+      border-radius: 5px;
+      padding: 25px 24px 23px;
+      box-shadow: 0 10px 28px rgba(13,31,60,0.04);
+    }
+    .insight-kicker {
+      display: block;
+      color: var(--gold);
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 9px;
+    }
+    .insight-card h3 { color: var(--navy); font-size: 1.06rem; margin-bottom: 8px; }
+    .insight-card p { font-size: 0.9rem; line-height: 1.65; }
+
+    .details-text {
+      max-width: 820px;
+      margin: 0 auto;
+      border-top: 1px solid var(--border-mid);
+      border-bottom: 1px solid var(--border-mid);
+    }
+    .details-text summary {
+      list-style: none;
+      cursor: pointer;
+      color: var(--navy);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 17px 0;
+      text-align: center;
+    }
+    .details-text summary::-webkit-details-marker { display: none; }
+    .details-text summary::after {
+      content: '  ↓';
+      color: var(--gold);
+      font-size: 1rem;
+    }
+    .details-text[open] summary::after { content: '  ↑'; }
+    .details-content { padding: 4px 6px 24px; max-width: 760px; margin: 0 auto; }
+    .details-content p { font-size: 0.94rem; margin-bottom: 15px; }
+    .details-content p:last-child { margin-bottom: 0; }
+
+    .proof-cta {
+      padding: 0 0 88px;
+      background: var(--cream);
+    }
+    .proof-cta-card {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 42px;
+      align-items: center;
+      background: var(--navy);
+      border-radius: 6px;
+      padding: 38px 42px;
+      box-shadow: 0 18px 50px rgba(13,31,60,0.12);
+      border-left: 5px solid var(--gold);
+    }
+    .proof-quote-mark {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold-light);
+      font-size: 2.5rem;
+      line-height: 0.6;
+      display: block;
+      margin-bottom: 11px;
+    }
+    .proof-quote {
+      font-family: 'Playfair Display', serif;
+      color: var(--white);
+      font-size: clamp(1.22rem, 2.3vw, 1.65rem);
+      line-height: 1.38;
+      margin: 0 0 12px;
+    }
+    .proof-attribution {
+      color: rgba(255,255,255,0.58);
+      font-size: 0.79rem;
+      line-height: 1.5;
+    }
+    .proof-action { text-align: center; }
+    .proof-action .btn-primary {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--navy);
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 16px 28px;
+      width: 100%;
+      max-width: 280px;
+    }
+    .proof-action .btn-primary:hover { background: var(--gold-light); border-color: var(--gold-light); }
+    .proof-action-note {
+      display: block;
+      color: rgba(255,255,255,0.58);
+      font-size: 0.73rem;
+      margin-top: 9px;
+    }
+
+    .author { padding: 88px 0; }
+    .author-inner { grid-template-columns: 260px 1fr; gap: 58px; align-items: center; }
+    .author-proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 18px 0 20px;
+    }
+    .author-proof span {
+      border: 1px solid rgba(184,135,46,0.32);
+      background: rgba(184,135,46,0.06);
+      color: var(--navy);
+      border-radius: 99px;
+      padding: 5px 10px;
+      font-size: 0.73rem;
+      font-weight: 600;
+    }
+
+    .chapters { padding: 88px 0; }
+    .chapters-header { margin-bottom: 34px; }
+    .topic-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+    .topic-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 21px 21px 19px;
+      min-height: 138px;
+    }
+    .topic-card .topic-num {
+      display: block;
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 7px;
+    }
+    .topic-card h3 { color: var(--navy); font-size: 0.98rem; margin-bottom: 5px; }
+    .topic-card p { font-size: 0.82rem; line-height: 1.55; }
+    .contents-details {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+    .contents-details > summary {
+      list-style: none;
+      cursor: pointer;
+      text-align: center;
+      color: var(--navy);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 16px 0;
+      border-top: 1px solid var(--border-mid);
+      border-bottom: 1px solid var(--border-mid);
+    }
+    .contents-details > summary::-webkit-details-marker { display: none; }
+    .contents-details > summary::after { content: '  ↓'; color: var(--gold); }
+    .contents-details[open] > summary::after { content: '  ↑'; }
+    .contents-details .chapters-grid { margin-top: 22px; }
+    .ch-item { min-height: 60px; }
+    .ch-prefix {
+      min-width: 64px;
+      color: var(--gold);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding-top: 2px;
+    }
+    .ch-item:nth-child(odd) { border-right: 1px solid var(--border); }
+    .ch-item:nth-child(even) { border-right: none; }
+    .ch-item:nth-last-child(-n+2) { border-bottom: none; }
+
+    .closing-cta {
+      background: var(--cream-mid);
+      padding: 0 0 88px;
+    }
+    .closing-cta-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 38px 30px;
+    }
+    .closing-cta-inner h2 { color: var(--navy); margin-bottom: 10px; }
+    .closing-cta-inner p { max-width: 600px; margin: 0 auto 22px; }
+    .closing-cta-inner .btn-primary { font-size: 0.96rem; padding: 15px 30px; }
+    .closing-cta-note { display: block; font-size: 0.75rem; color: var(--text-muted); margin-top: 8px; }
+
+    @media (max-width: 900px) {
+      .hero { min-height: auto; grid-template-columns: 1fr; }
+      .hero-text { padding: 46px 32px 24px; }
+      .hero-visual { padding: 2px 32px 74px; justify-content: center; }
+      .hero-visual img, .hero-visual .book-ph { width: 165px; }
+      .trust-strip-inner { padding: 0 24px; }
+      .trust-item { padding: 16px 14px; }
+      .insight-grid, .topic-grid { grid-template-columns: 1fr 1fr; }
+      .proof-cta-card { grid-template-columns: 1fr; gap: 26px; }
+      .proof-action { text-align: left; }
+      .author-inner { grid-template-columns: 210px 1fr; gap: 40px; }
+    }
+    @media (max-width: 640px) {
+      .hero-text { padding: 34px 24px 15px; }
+      .hero-text h1 { font-size: clamp(2.15rem, 11vw, 3rem); }
+      .hero-book-title { font-size: 1rem; }
+      .hero-subtitle { font-size: 0.88rem; margin-bottom: 12px; }
+      .hero-deck { font-size: 0.92rem !important; line-height: 1.55 !important; margin-bottom: 14px !important; }
+      .hero-proofline { gap: 5px 14px; margin-bottom: 18px; font-size: 0.69rem; }
+      .hero-proofline span:not(:last-child)::after { right: -9px; }
+      .hero-visual { padding: 0 24px 66px; }
+      .hero-visual img, .hero-visual .book-ph { width: 122px; box-shadow: 11px 11px 0 rgba(184,135,46,0.20), 0 24px 48px rgba(0,0,0,0.45); }
+      .hero-scroll-cue { bottom: 8px; font-size: 0.63rem; }
+      .trust-strip-inner { grid-template-columns: 1fr; padding: 0 24px; }
+      .trust-item { min-height: 62px; justify-content: flex-start; border-right: 0; border-bottom: 1px solid rgba(13,31,60,0.15); padding: 13px 0; }
+      .trust-item:last-child { border-bottom: 0; }
+      .trust-number { min-width: 70px; font-size: 1.55rem; }
+      .synopsis { padding: 68px 0 52px; }
+      .synopsis-intro { text-align: left; margin-bottom: 26px; }
+      .insight-grid, .topic-grid { grid-template-columns: 1fr; gap: 12px; }
+      .insight-card { padding: 20px; }
+      .proof-cta { padding-bottom: 68px; }
+      .proof-cta-card { padding: 30px 24px; }
+      .proof-action .btn-primary { max-width: none; }
+      .author { padding: 68px 0; }
+      .author-inner { grid-template-columns: 1fr; gap: 28px; }
+      .author-photo { max-width: 168px; }
+      .chapters { padding: 68px 0; }
+      .topic-card { min-height: auto; }
+      .chapters-grid { grid-template-columns: 1fr; }
+      .ch-item { border-right: none !important; border-bottom: 1px solid var(--border) !important; }
+      .ch-item:last-child { border-bottom: none !important; }
+      .closing-cta { padding-bottom: 68px; }
+      .closing-cta-inner { padding: 30px 22px; }
+    }
+
   </style>
 </head>
 <body>
@@ -668,11 +1025,11 @@
       <a href="#home" class="nav-brand">The Silent Voice in Education</a>
       <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#chapters">Chapters</a>
         <a href="#author">Author</a>
+        <a href="#chapters">Chapters</a>
         <a href="#blog">Blog</a>
         <!-- Purchase link -->
-        <a href="https://buy.thesilentvoiceineducation.com" class="nav-cta" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        <a href="https://buy.thesilentvoiceineducation.com" class="nav-cta" data-buy-location="navigation" target="_blank" rel="noopener noreferrer">Buy Now</a>
         <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMobilePanel">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
             <path d="M3 6h18"></path>
@@ -684,8 +1041,8 @@
     </div>
     <div class="nav-mobile-panel" id="navMobilePanel">
       <a href="#about">About</a>
-      <a href="#chapters">Chapters</a>
       <a href="#author">Author</a>
+      <a href="#chapters">Chapters</a>
       <a href="#blog">Blog</a>
     </div>
   </nav>
@@ -694,21 +1051,22 @@
   <section class="hero" id="home" aria-label="Book introduction">
     <div class="hero-lines" aria-hidden="true"></div>
     <div class="hero-text">
-      <span class="eyebrow">Vincent B. Troiano</span>
-      <h1>The Silent Voice<br>in Education</h1>
+      <span class="eyebrow">The Silent Voice in Education</span>
+      <h1>What happened to the teacher's voice?</h1>
+      <div class="hero-book-title">By Vincent B. Troiano</div>
       <p class="hero-subtitle">The Importance of Involving Classroom Teachers</p>
       <div class="rule" aria-hidden="true"></div>
-      <p>A 36-year veteran educator examines how the 1960s reform era sidelined classroom teachers -- and what it cost American students in special education and beyond.</p>
+      <p class="hero-deck">After 36 years in education, Vincent B. Troiano examines what changed when classroom teachers became less influential in the decisions shaping their own classrooms.</p>
+      <div class="hero-proofline" aria-label="Author and book credentials">
+        <span>36 years in education</span>
+        <span>27 years in special education</span>
+        <span>130 pages</span>
+      </div>
       <div class="hero-btns">
-        <a href="https://buy.thesilentvoiceineducation.com" class="btn-primary" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        <a href="https://buy.thesilentvoiceineducation.com" class="btn-primary" data-buy-location="hero" target="_blank" rel="noopener noreferrer">Buy the Book</a>
       </div>
     </div>
     <div class="hero-visual">
-      <!--
-        IMAGES: Place book-cover.jpg inside an "images" folder
-        in the same directory as this HTML file.
-        The onerror attribute shows a placeholder if the file is missing.
-      -->
       <img
         src="images/book-cover.jpg"
         alt="The Silent Voice in Education book cover by Vincent B. Troiano"
@@ -731,109 +1089,77 @@
     </a>
   </section>
 
-
+  <!-- CREDIBILITY STRIP -->
+  <section class="trust-strip" aria-label="Book credentials">
+    <div class="trust-strip-inner">
+      <div class="trust-item"><span class="trust-number">36</span><span class="trust-copy">Years in<br>education</span></div>
+      <div class="trust-item"><span class="trust-number">27</span><span class="trust-copy">Years in<br>special education</span></div>
+      <div class="trust-item"><span class="trust-number">130</span><span class="trust-copy">Pages — a focused,<br>accessible read</span></div>
+    </div>
+  </section>
 
   <!-- SYNOPSIS -->
-  <section class="synopsis" id="about" aria-label="About the book">
+  <section class="synopsis" id="about" aria-label="About the book" data-ga-view="view_synopsis">
     <div class="container">
-      <div class="synopsis-inner">
-        <div class="synopsis-left reveal">
-          <span class="eyebrow">About the Book</span>
-          <h2>When reform moved faster than the classroom</h2>
-          <div class="rule" aria-hidden="true"></div>
-          <div class="synopsis-pull">
-            <p>"Teachers should have a leading role in what happens in their classrooms."</p>
-          </div>
-        </div>
-        <div class="synopsis-right reveal reveal-delay-1">
+      <div class="synopsis-intro reveal">
+        <span class="eyebrow">Why This Book Matters</span>
+        <h2>Education policy changed. Classroom experience got quieter.</h2>
+        <p><em>The Silent Voice in Education</em> looks at decades of reform through the eyes of someone who spent his career doing the work: teaching students every day.</p>
+      </div>
+
+      <div class="insight-grid">
+        <article class="insight-card reveal">
+          <span class="insight-kicker">Teacher Voice</span>
+          <h3>Who should shape the classroom?</h3>
+          <p>The book examines how major instructional decisions increasingly moved away from classroom teachers and toward outside systems and theories.</p>
+        </article>
+        <article class="insight-card reveal reveal-delay-1">
+          <span class="insight-kicker">Special Education</span>
+          <h3>What policy looks like in practice</h3>
+          <p>Drawing on 27 years in special education, Troiano explores the gap between formal policy and the day-to-day judgment teachers use with individual students.</p>
+        </article>
+        <article class="insight-card reveal reveal-delay-2">
+          <span class="insight-kicker">Local Control</span>
+          <h3>Experience deserves a seat at the table</h3>
+          <p>From curriculum and evaluation to local leadership and individual instruction, the book argues for a stronger role for teachers closest to students.</p>
+        </article>
+      </div>
+
+      <details class="details-text" id="fullSynopsis">
+        <summary>Read the complete synopsis</summary>
+        <div class="details-content">
           <p>Up until the 1960s, elementary classroom instruction was based on the most effective procedures developed by classroom teachers, and American education was ranked number one in the world.</p>
           <p>A downward trend began with "New Math" and reading programs that discouraged the use of phonics. These programs were developed within higher education and were supposed to be more effective than the procedures favored by the great majority of classroom teachers.</p>
           <p>That downward trend accelerated in the 1980s, when the evaluation of classroom instruction was changed. Teachers were no longer recognized as having individual, yet effective, styles of teaching. Higher education created new criteria it considered more effective in the classroom, and this became the new basis for teacher evaluation and continued employment.</p>
           <p>The author's related article, <a href="blog/whatever-happened-to-arithmetic.html" style="color:var(--navy);font-weight:600;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px;">"Whatever Happened to Arithmetic,"</a> offers parents an explanation of the origins and use of "New Math" in the elementary school curriculum.</p>
           <p>When the book was written, St. Lucie County, Florida had two K-8 schools. Today there are eleven, with a twelfth under construction. The middle school concept, with its varied mix of grade levels, was another product of the 1960s, and it apparently does not offer the educational continuity that a K-8 school does. Its sketchy record of success is most likely due to teacher competence, rather than the application of new psychological theory or school organization.</p>
         </div>
-      </div>
+      </details>
     </div>
   </section>
 
-  <!-- CHAPTERS -->
-  <section class="chapters" id="chapters" aria-label="Table of contents">
+  <!-- SOCIAL PROOF + MID-PAGE CTA -->
+  <section class="proof-cta" aria-label="Reader endorsement and purchase">
     <div class="container">
-      <div class="chapters-header reveal">
-        <span class="eyebrow">Table of Contents</span>
-        <h2>What's inside</h2>
-      </div>
-      <div class="chapters-grid reveal reveal-delay-1">
-        <div class="ch-intro">
-          <span class="ch-num">Intro</span>
-          <span class="ch-title">The 1960s and "Change"</span>
-          <span class="ch-badge">Introduction</span>
+      <div class="proof-cta-card reveal">
+        <div>
+          <span class="proof-quote-mark" aria-hidden="true">“</span>
+          <p class="proof-quote">What's most important is this book is written by a teacher!</p>
+          <p class="proof-attribution">Allen McQuarrie — retired science teacher and NJEA leadership-training representative</p>
         </div>
-        <div class="ch-item">
-          <span class="ch-num">1</span>
-          <span class="ch-title">A Two-Tiered System</span>
-        </div>
-        <div class="ch-item">
-          <span class="ch-num">2</span>
-          <span class="ch-title">Local Leadership</span>
-        </div>
-        <div class="ch-item">
-          <span class="ch-num">3</span>
-          <span class="ch-title">Classroom Teachers React to the Times</span>
-        </div>
-        <div class="ch-item">
-          <span class="ch-num">4</span>
-          <span class="ch-title">Special Education: Basis and Reform</span>
-        </div>
-        <div class="ch-item">
-          <span class="ch-num">5</span>
-          <span class="ch-title">Classroom Management in Special Education</span>
-        </div>
-        <div class="ch-item">
-          <span class="ch-num">6</span>
-          <span class="ch-title">Education Establishment System Failure</span>
-        </div>
-        <div class="ch-item">
-          <span class="ch-num">7</span>
-          <span class="ch-title">Teacher-Initiated Change that has Stood the Test of Time</span>
-        </div>
-        <div class="ch-item">
-          <span class="ch-num">8</span>
-          <span class="ch-title">Poor Leadership in Real Time</span>
-        </div>
-        <div class="ch-item">
-          <span class="ch-num">9</span>
-          <span class="ch-title">Special Education as a Bureaucracy</span>
-        </div>
-        <div class="ch-item">
-          <span class="ch-num">10</span>
-          <span class="ch-title">IEP as Legal Document vs Classroom Teacher Day-to-Day Evaluations</span>
-        </div>
-        <div class="ch-item">
-          <span class="ch-num">11</span>
-          <span class="ch-title">The Teacher as Facilitator vs Goals and Objectives</span>
-        </div>
-        <div class="ch-item">
-          <span class="ch-num">12</span>
-          <span class="ch-title">Local Control of Education: A Beginning</span>
-        </div>
-        <div class="ch-item">
-          <span class="ch-num">13</span>
-          <span class="ch-title">Individual Instruction</span>
+        <div class="proof-action">
+          <a href="https://buy.thesilentvoiceineducation.com" class="btn-primary" data-buy-location="midpage-endorsement" target="_blank" rel="noopener noreferrer">Buy The Silent Voice in Education</a>
+          <span class="proof-action-note">Paperback and ebook options available</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- AUTHOR -->
-  <section class="author" id="author" aria-label="About the author">
+  <section class="author" id="author" aria-label="About the author" data-ga-view="view_author">
     <div class="container">
       <div class="author-inner">
         <div class="author-photo reveal">
-          <!--
-            IMAGES: Place author.jpg inside the "images" folder.
-            The onerror shows a placeholder if the file is missing.
-          -->
           <img
             src="images/author.jpg"
             alt="Vincent B. Troiano, author of The Silent Voice in Education"
@@ -849,14 +1175,74 @@
           </div>
         </div>
         <div class="author-bio reveal reveal-delay-1">
-          <span class="author-tag">About the Author</span>
+          <span class="author-tag">Meet the Author</span>
           <h2>Vincent B. Troiano</h2>
           <p class="author-role">Retired Educator, Old Bridge Township School System, New Jersey</p>
+          <div class="author-proof" aria-label="Author experience">
+            <span>36 years teaching</span>
+            <span>27 years special education</span>
+            <span>Grades 4–6 and special education</span>
+          </div>
           <div class="rule" aria-hidden="true"></div>
           <p>Vincent B. Troiano taught for the Old Bridge Township School System in New Jersey for 36 years: grades 4-6 for 9 years and special education for 27 years. His special education teaching career began in self-contained classes working with students identified as Emotionally Disturbed.</p>
-          <p>Concentrating on learning disabilities was an outgrowth of that experience. Over the course of his career, Troiano developed a firsthand understanding of the gap between educational policy and classroom reality -- a gap that forms the heart of this book.</p>
-          <p>The Silent Voice in Education draws on decades of direct observation and experience to argue that teachers, not bureaucracies, must be the primary voice in shaping education policy for the students they serve every day.</p>
+          <p>Over the course of his career, Troiano developed a firsthand understanding of the gap between educational policy and classroom reality — the gap at the heart of this book.</p>
+          <p><em>The Silent Voice in Education</em> draws on decades of direct observation and experience to argue that teachers must have a meaningful voice in shaping education policy for the students they serve every day.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTERS -->
+  <section class="chapters" id="chapters" aria-label="What the book covers" data-ga-view="view_chapters">
+    <div class="container">
+      <div class="chapters-header reveal">
+        <span class="eyebrow">What's Inside</span>
+        <h2>The ideas explored in the book</h2>
+      </div>
+
+      <div class="topic-grid">
+        <article class="topic-card reveal"><span class="topic-num">01</span><h3>Teacher voice & reform</h3><p>How classroom teachers responded as new instructional theories and systems reshaped schools.</p></article>
+        <article class="topic-card reveal reveal-delay-1"><span class="topic-num">02</span><h3>Local leadership & control</h3><p>The role local decision-making can play in keeping education connected to students and classrooms.</p></article>
+        <article class="topic-card reveal reveal-delay-2"><span class="topic-num">03</span><h3>Special education practice</h3><p>What decades of firsthand special education experience reveal about reform, management, and bureaucracy.</p></article>
+        <article class="topic-card reveal"><span class="topic-num">04</span><h3>Evaluation & classroom management</h3><p>Questions about standardized expectations, individual teaching styles, and what effective practice looks like.</p></article>
+        <article class="topic-card reveal reveal-delay-1"><span class="topic-num">05</span><h3>IEPs & individual instruction</h3><p>The tension between formal documents, goals, and the continuous judgments teachers make with individual students.</p></article>
+        <article class="topic-card reveal reveal-delay-2"><span class="topic-num">06</span><h3>Teacher-led change</h3><p>Why experience-based ideas from teachers can endure — and what institutional failures can teach us.</p></article>
+      </div>
+
+      <details class="contents-details" id="fullContents">
+        <summary>See the full table of contents</summary>
+        <div class="chapters-grid">
+          <div class="ch-item"><span class="ch-prefix">Preface</span><span class="ch-title">Preface</span></div>
+          <div class="ch-item"><span class="ch-prefix">Intro</span><span class="ch-title">Introduction</span></div>
+          <div class="ch-item"><span class="ch-prefix">Chapter 1</span><span class="ch-title">The 1960s and “Change”</span></div>
+          <div class="ch-item"><span class="ch-prefix">Chapter 2</span><span class="ch-title">A Two-Tiered System</span></div>
+          <div class="ch-item"><span class="ch-prefix">Chapter 3</span><span class="ch-title">Local Leadership</span></div>
+          <div class="ch-item"><span class="ch-prefix">Chapter 4</span><span class="ch-title">Classroom Teachers React to the Times</span></div>
+          <div class="ch-item"><span class="ch-prefix">Chapter 5</span><span class="ch-title">Special Education: Basis and Reform</span></div>
+          <div class="ch-item"><span class="ch-prefix">Chapter 6</span><span class="ch-title">Classroom Management in Special Education</span></div>
+          <div class="ch-item"><span class="ch-prefix">Chapter 7</span><span class="ch-title">Education Establishment System Failure</span></div>
+          <div class="ch-item"><span class="ch-prefix">Chapter 8</span><span class="ch-title">Teacher-Initiated Change that has Stood the Test of Time</span></div>
+          <div class="ch-item"><span class="ch-prefix">Chapter 9</span><span class="ch-title">Poor Leadership in Real Time</span></div>
+          <div class="ch-item"><span class="ch-prefix">Chapter 10</span><span class="ch-title">Special Education as a Bureaucracy</span></div>
+          <div class="ch-item"><span class="ch-prefix">Chapter 11</span><span class="ch-title">IEP as Legal Document vs Classroom Teacher Day-to-Day Evaluations</span></div>
+          <div class="ch-item"><span class="ch-prefix">Chapter 12</span><span class="ch-title">The Teacher as Facilitator vs Goals and Objectives</span></div>
+          <div class="ch-item"><span class="ch-prefix">Chapter 13</span><span class="ch-title">Local Control of Education: A Beginning</span></div>
+          <div class="ch-item"><span class="ch-prefix">Chapter 14</span><span class="ch-title">Individual Instruction</span></div>
+          <div class="ch-item"><span class="ch-prefix">Epilogue</span><span class="ch-title">The Classroom Teacher</span></div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- CLOSING PURCHASE CTA -->
+  <section class="closing-cta" aria-label="Purchase the book">
+    <div class="container">
+      <div class="closing-cta-inner reveal">
+        <span class="eyebrow">Continue the Conversation</span>
+        <h2>Hear the classroom teacher's side of the story.</h2>
+        <p>Explore Vincent B. Troiano's 36-year perspective on education reform, special education, local control, and the role of teacher judgment.</p>
+        <a href="https://buy.thesilentvoiceineducation.com" class="btn-primary" data-buy-location="after-contents" target="_blank" rel="noopener noreferrer">Buy the Book</a>
+        <span class="closing-cta-note">Paperback and ebook options available</span>
       </div>
     </div>
   </section>
@@ -912,9 +1298,9 @@
         <span class="footer-copy">&copy; 2025 Vincent B. Troiano. All rights reserved.</span>
       </div>
       <div class="footer-links">
-        <a href="https://buy.thesilentvoiceineducation.com" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        <a href="https://buy.thesilentvoiceineducation.com" data-buy-location="footer" target="_blank" rel="noopener noreferrer">Buy Now</a>
         <a href="#blog">Blog</a>
-        <a href="#author">Contact</a>
+        <a href="#author">About Vincent</a>
       </div>
     </div>
   </footer>
@@ -948,7 +1334,7 @@
     }
 
     // Scroll-spy: highlight current section in nav (desktop + mobile)
-    const spySections = ['about', 'chapters', 'author', 'blog']
+    const spySections = ['about', 'author', 'chapters', 'blog']
       .map(id => document.getElementById(id))
       .filter(Boolean);
     const spyLinks = document.querySelectorAll(
@@ -967,6 +1353,53 @@
       });
     }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
     spySections.forEach(section => spyObserver.observe(section));
+
+    // Conversion-page engagement tracking. These events complement GA4's
+    // standard 90% scroll event so campaign traffic can be diagnosed by section.
+    const gaViewObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const eventName = entry.target.dataset.gaView;
+        if (eventName && typeof gtag === 'function') {
+          gtag('event', eventName, { page_path: window.location.pathname });
+        }
+        gaViewObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.35 });
+    document.querySelectorAll('[data-ga-view]').forEach(el => gaViewObserver.observe(el));
+
+    const sentDepths = new Set();
+    const depthMilestones = [25, 50, 75, 90];
+    const sendScrollDepth = () => {
+      const doc = document.documentElement;
+      const scrollable = Math.max(1, doc.scrollHeight - window.innerHeight);
+      const depth = Math.min(100, Math.round((window.scrollY / scrollable) * 100));
+      depthMilestones.forEach(milestone => {
+        if (depth >= milestone && !sentDepths.has(milestone)) {
+          sentDepths.add(milestone);
+          if (typeof gtag === 'function') {
+            gtag('event', 'scroll_depth', { percent_scrolled: milestone });
+          }
+        }
+      });
+    };
+    window.addEventListener('scroll', sendScrollDepth, { passive: true });
+    sendScrollDepth();
+
+    const trackDetailsOpen = (id, eventName) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      let sent = false;
+      el.addEventListener('toggle', () => {
+        if (el.open && !sent && typeof gtag === 'function') {
+          sent = true;
+          gtag('event', eventName);
+        }
+      });
+    };
+    trackDetailsOpen('fullSynopsis', 'full_synopsis_open');
+    trackDetailsOpen('fullContents', 'full_toc_open');
+
   </script>
 
 </body>
