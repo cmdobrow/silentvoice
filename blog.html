@@ -4,13 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Blog | The Silent Voice in Education</title>
-  <meta name="description" content="Essays on education reform, special education, and the role of classroom teachers by Vincent B. Troiano, a 36-year veteran educator.">
+  <title>Education Reform &amp; Teaching Essays | Vincent B. Troiano</title>
+  <meta name="description" content="Education reform and teaching essays by Vincent B. Troiano on teacher voice, New Math, arithmetic, special education, classroom practice, and school policy.">
   <meta name="author" content="Vincent B. Troiano">
 
-  <meta property="og:title" content="Blog | The Silent Voice in Education">
-  <meta property="og:description" content="Essays on education reform, special education, and the role of classroom teachers.">
+  <meta property="og:title" content="Education Reform &amp; Teaching Essays | Vincent B. Troiano">
+  <meta property="og:description" content="Essays on teacher voice, New Math, arithmetic, special education, classroom practice, and education reform.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thesilentvoiceineducation.com/blog.html">
+  <meta property="og:image" content="https://thesilentvoiceineducation.com/images/book-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://thesilentvoiceineducation.com/blog.html">
+
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://thesilentvoiceineducation.com/blog.html#page",
+        "url": "https://thesilentvoiceineducation.com/blog.html",
+        "name": "Education Reform & Teaching Essays",
+        "description": "Essays by Vincent B. Troiano on teacher voice, mathematics education, special education, and education reform.",
+        "isPartOf": {
+          "@id": "https://thesilentvoiceineducation.com/#website"
+        },
+        "author": {
+          "@id": "https://thesilentvoiceineducation.com/vincent-b-troiano.html#vincent"
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://thesilentvoiceineducation.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://thesilentvoiceineducation.com/blog.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -177,6 +220,19 @@
       max-width: 560px;
     }
 
+    /* ---- TOPIC HUBS ---- */
+    .topic-hubs {
+      max-width: 1080px; margin: 0 auto; padding: 54px 40px 4px;
+    }
+    .topic-hubs h2 { color: var(--navy); font-size: 1.55rem; margin-bottom: 10px; }
+    .topic-hubs > p { color: var(--text-muted); max-width: 720px; margin-bottom: 24px; line-height: 1.75; }
+    .hub-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .hub-card { background: var(--white); border: 1px solid var(--border); border-radius: 5px; padding: 22px 24px; text-decoration: none; transition: transform .2s, border-color .2s; }
+    .hub-card:hover { transform: translateY(-2px); border-color: var(--gold); }
+    .hub-card span { display:block; color: var(--gold); font-size:.64rem; letter-spacing:.12em; text-transform:uppercase; font-weight:600; margin-bottom:8px; }
+    .hub-card h3 { color: var(--navy); font-size:1.12rem; margin-bottom:7px; }
+    .hub-card p { color:var(--text-muted); font-size:.9rem; line-height:1.65; }
+
     /* ---- POST LIST ---- */
     .posts {
       max-width: 1080px;
@@ -274,6 +330,8 @@
       .nav-links { gap: 10px; }
       .nav-links .nav-cta { padding: 8px 14px; font-size: 0.72rem; }
       .blog-header { padding: calc(var(--nav-h) + 48px) 24px 48px; }
+      .topic-hubs { padding: 40px 24px 0; }
+      .hub-grid { grid-template-columns: 1fr; }
       .posts { padding: 48px 24px 56px; }
       .post-card { grid-template-columns: 1fr; gap: 10px; }
       .post-date { padding-top: 0; }
@@ -324,7 +382,7 @@
       <div class="nav-links">
         <a href="index.html#about">About</a>
         <a href="index.html#chapters">Chapters</a>
-        <a href="index.html#author">Author</a>
+        <a href="vincent-b-troiano.html">Author</a>
         <a href="blog.html">Blog</a>
         <a href="https://buy.thesilentvoiceineducation.com" class="nav-cta" target="_blank" rel="noopener noreferrer">Buy Now</a>
         <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMobilePanel">
@@ -339,7 +397,7 @@
     <div class="nav-mobile-panel" id="navMobilePanel">
       <a href="index.html#about">About</a>
       <a href="index.html#chapters">Chapters</a>
-      <a href="index.html#author">Author</a>
+      <a href="vincent-b-troiano.html">Author</a>
       <a href="blog.html">Blog</a>
     </div>
   </nav>
@@ -352,6 +410,18 @@
     </div>
   </header>
 
+  <section class="topic-hubs" aria-labelledby="topic-guides-heading">
+    <span class="post-tag">Explore by topic</span>
+    <h2 id="topic-guides-heading">Topic guides</h2>
+    <p>Start with a focused guide, then move through related essays. These hubs connect the site’s strongest themes so readers and search engines can follow the subject in depth.</p>
+    <div class="hub-grid">
+      <a class="hub-card" href="topics/teacher-voice-education-reform.html"><span>Teacher Voice</span><h3>Teacher Voice &amp; Education Reform</h3><p>Classroom judgment, reform, local leadership, and who gets to shape instruction.</p></a>
+      <a class="hub-card" href="topics/new-math-arithmetic.html"><span>Mathematics</span><h3>New Math &amp; Arithmetic</h3><p>The history of New Math, math facts, computational fluency, and readiness for algebra.</p></a>
+      <a class="hub-card" href="topics/special-education.html"><span>Special Education</span><h3>Special Education &amp; Individual Instruction</h3><p>IEPs, classroom management, bureaucracy, teacher judgment, and individual needs.</p></a>
+      <a class="hub-card" href="topics/history-american-education-reform.html"><span>Education History</span><h3>History of American Education Reform</h3><p>Mid-century curriculum movements, school organization, and the changing role of teachers.</p></a>
+    </div>
+  </section>
+
   <main class="posts">
 
     <!-- ============================================
@@ -362,7 +432,7 @@
       <div class="post-date">August 29, 2026</div>
       <div>
         <span class="post-tag">Education Reform</span>
-        <h2>New Leadership in Education</h2>
+        <h2>How Education Reform Sidelined Classroom Teachers in the 1960s</h2>
         <p>How outside influence from higher education, new math, administrative hiring, middle schools, and changing reading programs began reshaping elementary education in the 1950s and 1960s.</p>
         <span class="read-more">Read the essay &rarr;</span>
       </div>
@@ -378,8 +448,8 @@
       <div class="post-date">August 2026</div>
       <div>
         <span class="post-tag">Education History</span>
-        <h2>Why Arithmetic Made Algebra Easy, and New Math Didn't</h2>
-        <p>When the President's Math Commission Report of 2008 cited "a lack of ease of operations" regarding algebra readiness, it was quietly circumventing a simpler word: arithmetic.</p>
+        <h2>New Math vs. Arithmetic: Why Math Facts Matter for Algebra</h2>
+        <p>The 2008 National Mathematics Advisory Panel emphasized computational fluency, automatic recall of math facts, and the foundations students need before algebra.</p>
         <span class="read-more">Read the essay &rarr;</span>
       </div>
     </a>
@@ -413,7 +483,7 @@
       <div class="footer-links">
         <a href="https://buy.thesilentvoiceineducation.com" target="_blank" rel="noopener noreferrer">Buy Now</a>
         <a href="index.html">Home</a>
-        <a href="index.html#author">Contact</a>
+        <a href="vincent-b-troiano.html">About Vincent</a>
       </div>
     </div>
   </footer>

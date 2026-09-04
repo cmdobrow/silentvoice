@@ -41,36 +41,104 @@
 </script>
 
   <!-- SEO -->
-  <title>The Silent Voice in Education | Vincent B. Troiano</title>
-  <meta name="description" content="A 36-year veteran educator examines how the 1960s reform era sidelined classroom teachers and what it cost American students in special education and beyond. By Vincent B. Troiano.">
+  <title>The Silent Voice in Education by Vincent B. Troiano | Teacher Voice &amp; Education Reform</title>
+  <meta name="description" content="The Silent Voice in Education by Vincent B. Troiano explores teacher voice, education reform, special education, local control, and classroom experience across a 36-year teaching career.">
   <meta name="author" content="Vincent B. Troiano">
   <meta name="keywords" content="education reform, classroom teachers, special education, IEP, 1960s education, Vincent Troiano, silent voice in education, local control education">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="The Silent Voice in Education | Vincent B. Troiano">
+  <meta property="og:title" content="The Silent Voice in Education by Vincent B. Troiano">
   <meta property="og:description" content="A veteran educator's landmark work on how 1960s school reforms sidelined classroom teachers -- and what it cost American students.">
   <meta property="og:type" content="book">
-  <meta property="og:image" content="images/book-cover.jpg">
+  <meta property="og:image" content="https://thesilentvoiceineducation.com/images/book-cover.jpg">
+  <meta property="og:image:alt" content="Cover of The Silent Voice in Education by Vincent B. Troiano">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Silent Voice in Education by Vincent B. Troiano">
+  <meta name="twitter:description" content="A veteran classroom teacher on teacher voice, education reform, special education, and local control.">
+  <meta name="twitter:image" content="https://thesilentvoiceineducation.com/images/book-cover.jpg">
   <meta property="og:url" content="https://thesilentvoiceineducation.com/">
   <link rel="canonical" href="https://thesilentvoiceineducation.com/">
 
-  <!-- Schema.org Book Structured Data -->
+  <!-- Schema.org structured data -->
   <script type="application/ld+json">
-  {
+{
     "@context": "https://schema.org",
-    "@type": "Book",
-    "name": "The Silent Voice in Education",
-    "alternativeHeadline": "The Importance of Involving Classroom Teachers",
-    "author": {
-      "@type": "Person",
-      "name": "Vincent B. Troiano",
-      "jobTitle": "Retired Educator",
-      "worksFor": "Old Bridge Township School System"
-    },
-    "description": "A veteran educator examines how 1960s reforms sidelined classroom teachers and what it cost American students in special education and beyond.",
-    "genre": ["Education", "Special Education", "Education Policy"],
-    "inLanguage": "en",
-    "url": "https://buy.thesilentvoiceineducation.com"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://thesilentvoiceineducation.com/#website",
+        "url": "https://thesilentvoiceineducation.com/",
+        "name": "The Silent Voice in Education",
+        "description": "Official website for The Silent Voice in Education by Vincent B. Troiano, with essays on teacher voice, education reform, special education, and mathematics education.",
+        "inLanguage": "en-US",
+        "publisher": {
+          "@id": "https://thesilentvoiceineducation.com/vincent-b-troiano.html#vincent"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://thesilentvoiceineducation.com/vincent-b-troiano.html#vincent",
+        "name": "Vincent B. Troiano",
+        "url": "https://thesilentvoiceineducation.com/vincent-b-troiano.html",
+        "image": "https://thesilentvoiceineducation.com/images/author.jpg",
+        "jobTitle": "Retired Educator",
+        "description": "Vincent B. Troiano taught for 36 years in the Old Bridge Township School System in New Jersey, including 27 years in special education.",
+        "knowsAbout": [
+          "Teacher voice",
+          "Education reform",
+          "Special education",
+          "Elementary education",
+          "Mathematics education"
+        ],
+        "sameAs": [
+          "https://www.bloomsbury.com/us/silent-voice-in-education-9781475848458/"
+        ]
+      },
+      {
+        "@type": "Book",
+        "@id": "https://thesilentvoiceineducation.com/#book",
+        "name": "The Silent Voice in Education",
+        "alternativeHeadline": "The Importance of Involving Classroom Teachers",
+        "url": "https://thesilentvoiceineducation.com/",
+        "image": "https://thesilentvoiceineducation.com/images/book-cover.jpg",
+        "author": {
+          "@id": "https://thesilentvoiceineducation.com/vincent-b-troiano.html#vincent"
+        },
+        "datePublished": "2018-11-27",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Rowman & Littlefield",
+          "url": "https://www.bloomsbury.com/us/silent-voice-in-education-9781475848458/"
+        },
+        "description": "A classroom teacher's examination of education reform, special education, local control, teacher evaluation, and the importance of involving classroom teachers.",
+        "genre": [
+          "Education",
+          "Special Education",
+          "Education Policy"
+        ],
+        "inLanguage": "en",
+        "sameAs": [
+          "https://www.bloomsbury.com/us/silent-voice-in-education-9781475848458/"
+        ],
+        "workExample": [
+          {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/Hardcover",
+            "isbn": "9781475848441"
+          },
+          {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/Paperback",
+            "isbn": "9781475848458"
+          },
+          {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "isbn": "9781475848465"
+          }
+        ]
+      }
+    ]
   }
   </script>
 
@@ -481,6 +549,17 @@
       margin-top: 1px;
     }
     .ch-title { font-size: 0.88rem; font-weight: 500; color: var(--text); line-height: 1.5; }
+
+    .book-details {
+      margin-top: 26px;
+      padding: 16px 18px;
+      background: rgba(255,255,255,0.55);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+    .book-details a { color: var(--navy); font-weight: 600; text-underline-offset: 3px; }
 
     /* ---- AUTHOR ---- */
     .author { padding: 100px 0; background: var(--cream); }
@@ -1543,7 +1622,7 @@
       <a href="#home" class="nav-brand">The Silent Voice in Education</a>
       <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#author">Author</a>
+        <a href="vincent-b-troiano.html">Author</a>
         <a href="#chapters">Chapters</a>
         <a href="#blog">Blog</a>
         <!-- Purchase link -->
@@ -1559,7 +1638,7 @@
     </div>
     <div class="nav-mobile-panel" id="navMobilePanel">
       <a href="#about">About</a>
-      <a href="#author">Author</a>
+      <a href="vincent-b-troiano.html">Author</a>
       <a href="#chapters">Chapters</a>
       <a href="#blog">Blog</a>
     </div>
@@ -1604,7 +1683,6 @@
           <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
           <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
         </svg>
-        Place book-cover.jpg<br>in the images/ folder
       </div>
     </div>
     <a href="#about" class="hero-scroll-cue" aria-label="Continue to the synopsis">
@@ -1643,14 +1721,16 @@
         </article>
       </div>
 
+      <p class="book-details reveal"><strong>Book details:</strong> Published November 27, 2018 by Rowman &amp; Littlefield. Paperback ISBN 9781475848458; hardback ISBN 9781475848441; ebook ISBN 9781475848465. <a href="https://www.bloomsbury.com/us/silent-voice-in-education-9781475848458/" target="_blank" rel="noopener noreferrer">View the official publisher listing</a>.</p>
+
       <details class="details-text" id="fullSynopsis">
         <summary>Read the complete synopsis</summary>
         <div class="details-content">
-          <p>Up until the 1960s, elementary classroom instruction was based on the most effective procedures developed by classroom teachers, and American education was ranked number one in the world.</p>
-          <p>A downward trend began with "New Math" and reading programs that discouraged the use of phonics. These programs were developed within higher education and were supposed to be more effective than the procedures favored by the great majority of classroom teachers.</p>
+          <p><em>The Silent Voice in Education</em> argues that, before the reform era of the 1960s, elementary instruction relied more heavily on procedures developed and refined by classroom teachers. Claims that the United States was literally “number one in the world,” however, are not supported by the earliest major cross-national math comparison: the <a href="https://www.iea.nl/node/1542" target="_blank" rel="noopener noreferrer">1964 First International Mathematics Study</a> was the beginning of modern international comparison, and later analyses do not show the United States leading its participating countries.</p>
+          <p>The book connects the reform era to “New Math” and to reading programs that reduced the role of phonics. The historical record confirms that the New Math movement reshaped U.S. mathematics curricula beginning in the 1950s and 1960s; a later <a href="https://www.nichd.nih.gov/publications/pubs/nrp/findings" target="_blank" rel="noopener noreferrer">National Reading Panel review</a> found strong evidence for systematic phonics as one important component of early reading instruction.</p>
           <p>That downward trend accelerated in the 1980s, when the evaluation of classroom instruction was changed. Teachers were no longer recognized as having individual, yet effective, styles of teaching. Higher education created new criteria it considered more effective in the classroom, and this became the new basis for teacher evaluation and continued employment.</p>
           <p>The author's related article, <a href="blog/whatever-happened-to-arithmetic.html" style="color:var(--navy);font-weight:600;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px;">"Whatever Happened to Arithmetic,"</a> offers parents an explanation of the origins and use of "New Math" in the elementary school curriculum.</p>
-          <p>When the book was written, St. Lucie County, Florida had two K-8 schools. Today there are eleven, with a twelfth under construction. The middle school concept, with its varied mix of grade levels, was another product of the 1960s, and it apparently does not offer the educational continuity that a K-8 school does. Its sketchy record of success is most likely due to teacher competence, rather than the application of new psychological theory or school organization.</p>
+          <p>When the book was written, St. Lucie County, Florida had two K-8 schools; the author later observed substantial growth in that model. The modern U.S. <a href="https://eric.ed.gov/?id=EJ1132992" target="_blank" rel="noopener noreferrer">middle school movement is generally dated to 1963</a>. Troiano argues that continuity and teacher competence deserve more weight than organizational fashion when school structures are evaluated.</p>
         </div>
       </details>
     </div>
@@ -1688,7 +1768,6 @@
               <circle cx="12" cy="8" r="4"/>
               <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
             </svg>
-            Place author.jpg<br>in the images/ folder
           </div>
         </div>
         <div class="author-bio reveal reveal-delay-1">
@@ -1704,6 +1783,7 @@
           <p>Vincent B. Troiano taught for the Old Bridge Township School System in New Jersey for 36 years: grades 4-6 for 9 years and special education for 27 years. His special education teaching career began in self-contained classes working with students identified as Emotionally Disturbed.</p>
           <p>Over the course of his career, Troiano developed a firsthand understanding of the gap between educational policy and classroom reality — the gap at the heart of this book.</p>
           <p><em>The Silent Voice in Education</em> draws on decades of direct observation and experience to argue that teachers must have a meaningful voice in shaping education policy for the students they serve every day.</p>
+          <p><a href="vincent-b-troiano.html" class="btn-outline">Read Vincent B. Troiano’s full biography →</a></p>
         </div>
       </div>
     </div>
@@ -1786,7 +1866,7 @@
             <span class="blog-card-num" aria-hidden="true">03</span>
           </div>
           <div class="blog-card-body">
-            <h3>New Leadership in Education</h3>
+            <h3>How Education Reform Sidelined Classroom Teachers in the 1960s</h3>
             <p>How outside influence from higher education, new math, administrative hiring, middle schools, and changing reading programs began reshaping elementary education.</p>
             <span class="blog-read-more">Read more &rarr;</span>
           </div>
@@ -1797,8 +1877,8 @@
             <span class="blog-card-num" aria-hidden="true">02</span>
           </div>
           <div class="blog-card-body">
-            <h3>Why Arithmetic Made Algebra Easy, and New Math Didn't</h3>
-            <p>When the 2008 report cited "a lack of ease of operations" in algebra readiness, it was quietly circumventing a simpler word: arithmetic.</p>
+            <h3>New Math vs. Arithmetic: Why Math Facts Matter for Algebra</h3>
+            <p>What the 2008 National Mathematics Advisory Panel actually said about computational fluency, automatic recall of math facts, and preparation for algebra.</p>
             <span class="blog-read-more">Read more &rarr;</span>
           </div>
         </a>
@@ -1822,12 +1902,12 @@
     <div class="footer-inner">
       <div>
         <span class="footer-brand">The Silent Voice in Education</span>
-        <span class="footer-copy">&copy; 2025 Vincent B. Troiano. All rights reserved.</span>
+        <span class="footer-copy">&copy; 2026 Vincent B. Troiano. All rights reserved.</span>
       </div>
       <div class="footer-links">
         <a href="https://buy.thesilentvoiceineducation.com" data-buy-location="footer" target="_blank" rel="noopener noreferrer">Buy Now</a>
         <a href="#blog">Blog</a>
-        <a href="#author">About Vincent</a>
+        <a href="vincent-b-troiano.html">About Vincent</a>
       </div>
     </div>
   </footer>
